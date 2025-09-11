@@ -3,10 +3,9 @@ import "../../assets/css/about.css";
 import { ReactTyped } from "react-typed";
 import { FaGithub } from "react-icons/fa";
 import Social from "../social/Social";
-
+import image from "../../assets/images/image.png";
 
 export default function () {
-  const aboutRef = useRef(null);
   const [startTyping, setStartTyping] = useState(false);
 
   return (
@@ -14,7 +13,7 @@ export default function () {
       <div className="flex flex-col md:flex-row gap-10 pt-5 justify-center my-20 px-4 md:px-10 w-full">
         <div className="about-photo ">
           <img
-            src="src/assets/image.png"
+            src={image}
             alt=""
             className="w-full h-auto object-cover"
           />

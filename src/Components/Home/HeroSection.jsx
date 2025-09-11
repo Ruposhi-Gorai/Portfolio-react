@@ -1,5 +1,5 @@
 import React from "react";
-import myGif from "../../assets/3.svg";
+import myGif from "../../assets/images/3.svg";
 import Intro from "./Intro";
 import Social from "../social/Social";
 
