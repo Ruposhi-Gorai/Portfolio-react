@@ -27,7 +27,7 @@ export default function Pheading() {
       <div className="slider-container text-[#00FFFF] add-flex justify-center font-light">
         <h1
           className={`tracking-[2px] sm:tracking-[8px] font-light
-                                text-4xl sm:text-5xl`}
+           text-4xl sm:text-5xl`}
         >
           PROJECTS
         </h1>

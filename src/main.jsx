@@ -13,9 +13,9 @@ import Footer from "./Components/Footer";
 createRoot(document.getElementById("root")).render(
   <>
 <HomePage />
-<About />
 <Skills />
 <Projects/>
+<About />
 <Contact/>
 <Footer/>
 </>

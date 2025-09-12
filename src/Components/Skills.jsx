@@ -25,7 +25,7 @@ export default function Skills() {
       <div className="min-h-screen  text-gray-300 py-10">
         <h1 className="text-5xl font-light  text-[#00FFFF] tracking-[8px] text-center  p-10 md:my-5 ">My Skills</h1>
         <div className="flex flex-wrap justify-center gap-10 p-5">
-          <div className="card bg-[#6f6f7446] p-5 md:p-10 rounded-2xl w-full md:w-[40%] hover:scale-[1.05] transition-all duration-300">
+          <div className="card bg-[#43485734] shadow-2xl p-5 md:p-10 rounded-2xl w-full md:w-[40%] hover:scale-[1.05] transition-all duration-300">
             <h2 className="text-2xl px-5 font-semibold text-teal-300">
               Frontend
             </h2>
@@ -38,7 +38,7 @@ export default function Skills() {
               <SiRedux />
             </div>
           </div>
-          <div className="card bg-[#6f6f7446] p-5 md:p-10 rounded-2xl w-full md:w-[40%] hover:scale-[1.05] transition-all duration-300">
+          <div className="card bg-[#43485734] shadow-2xl p-5 md:p-10 rounded-2xl w-full md:w-[40%] hover:scale-[1.05] transition-all duration-300">
             <h2 className="text-2xl px-5 text-teal-300">Backend</h2>
             <div className="flex text-3xl md:text-5xl gap-5  px-5 py-10">
               <FaNodeJs />
@@ -46,7 +46,7 @@ export default function Skills() {
               <DiMongodb />
             </div>
           </div>
-          <div className="card bg-[#6f6f7446] p-5 md:p-10 rounded-2xl w-full md:w-[40%] hover:scale-[1.05] transition-all duration-300">
+          <div className="card bg-[#43485734] shadow-2xl p-5 md:p-10 rounded-2xl w-full md:w-[40%] hover:scale-[1.05] transition-all duration-300">
             <h2 className="text-2xl px-5 text-teal-300">Frameworks</h2>
             <div className="flex text-3xl md:text-5xl gap-5  px-5 py-10">
               <RiNextjsLine />
@@ -56,7 +56,7 @@ export default function Skills() {
               <SiReactbootstrap />
             </div>
           </div>
-          <div className="card bg-[#6f6f7446] p-5 md:p-10 rounded-2xl w-full md:w-[40%] hover:scale-[1.05] transition-all duration-300">
+          <div className="card bg-[#43485734] shadow-2xl p-5 md:p-10 rounded-2xl w-full md:w-[40%] hover:scale-[1.05] transition-all duration-300">
             <h2 className="text-2xl px-5 text-teal-300">Tools & others</h2>
             <div className="flex text-3xl md:text-5xl gap-5  flex-wrap px-5 py-10">
               <FaGitAlt />
