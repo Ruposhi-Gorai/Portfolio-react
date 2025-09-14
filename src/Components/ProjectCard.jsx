@@ -1,23 +1,34 @@
 import React, { useState } from "react";
+import { RiGitRepositoryLine } from "react-icons/ri";
 
-export default function ProjectCard() {
-   
-
+export default function ProjectCard({ item }) {
   return (
     <>
-      <div className="bg-[#43485734] rounded-lg shadow-lg md:w-[25%] p-6 transition-all  hover:scale-[1.02]">
-        <img
-          src="https://thumbs.dreamstime.com/b/mobile-note-taking-ui-graphic-vector-design-notes-app-interface-clean-functional-art-perfect-productivity-apps-tools-368910096.jpg"
-          alt=""
-          className="rounded-t-lg"
-        />
-        <div className="p-6">
-          <h2 className="font-bold mb-2 text-2xl text-teal-500">Notes App</h2>
-          <p className="text-teal-500 mb-2">
-            This is a little bit better of a card!
-          </p>
-          <button className="git-btn">Github link</button>
-        </div>
+
+      <div className="flex flex-col gap-3">
+        <h2 className="font-bold mb-2 text-2xl text-teal-500">{item.name}</h2>
+        <p className="text-teal-500 mb-2">{item.description}</p>
+      </div>
+
+      <div className="flex gap-6 justify-start mt-6 ">
+        {item.homepage && (
+          <a
+            href={item.homepage}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="md:w-[28%] text-center px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-medium transition duration-200"
+          >
+            Demo
+          </a>
+        )}
+        <a
+          href={item.html_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="md:w-[30%] text-center px-4 py-2 rounded-lg border border-teal-500 hover:bg-teal-500 text-teal-400 hover:text-white font-medium transition duration-200"
+        >
+          Code &lt;/&gt;
+        </a>
       </div>
     </>
   );

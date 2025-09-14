@@ -6,17 +6,8 @@ import { FaRegStar } from "react-icons/fa";
 import "../assets/css/home.css";
 
 export default function Pheading() {
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow:
-      window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-  };
+
+
 
   // Responsive text size
   const headingClass =
@@ -24,12 +15,13 @@ export default function Pheading() {
 
   return (
     <>
+  
       <div className="slider-container text-[#00FFFF] add-flex justify-center font-light">
         <h1
-          className={`tracking-[2px] sm:tracking-[8px] font-light
-           text-4xl sm:text-5xl`}
+          className="tracking-[2px] sm:tracking-[8px] font-light
+           text-3xl md:text-5xl py-5"
         >
-          PROJECTS
+          RECENT PROJECTS
         </h1>
       </div>
     </>
