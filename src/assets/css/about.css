@@ -1,5 +1,6 @@
 
 
+
 /* .about-photo img {
   display: block;
   width: 100%;
@@ -21,6 +22,9 @@ ul.custom-dash li::marker {
   content: "# ";
   color: rgb(89, 165, 165);
 }
-
+/* .add-image{
+  background: url('../images/image.png') no-repeat center;
+  border-radius: 16px;
+} */
 
 
