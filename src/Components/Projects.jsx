@@ -25,7 +25,7 @@ export default function Projects() {
       .catch((err) => {
         toast.error("something went wrong!");
       });
-  }, []);
+  }, [project]);
 
   const cardVariants = {
     hidden: { opacity: 0 }, // start invisible & slightly down
