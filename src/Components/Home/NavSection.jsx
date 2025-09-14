@@ -5,7 +5,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="navbg text-white  fixed top-0 left-0 w-full max-w-full overflow-x-hidden z-50 border-b border-gray-800 ">
+    <nav className=" text-white border-b-[1px] border-gray-900  shadow-[0px_8px_20px_rgba(0,0,0,0.5)] fixed top-0 left-0 bg-black w-full max-w-full overflow-x-hidden z-50  ">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
         {/* Logo */}
         <h1 className="text-2xl font-semibold text-teal-400 drop-shadow-[0_0_10px_#14b8a6] ">{"{RG}"}</h1>

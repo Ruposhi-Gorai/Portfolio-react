@@ -4,30 +4,47 @@
 
 
 body {
-  background: radial-gradient(circle at top left, #1a1a40, #0d0d1a) no-repeat; 
+  /* background: radial-gradient(circle at top left, #1a1a40, #0d0d1a) no-repeat;  */
+  /* background: linear-gradient(to bottom, black, rgb(44, 44, 44)) no-repeat; */
+  background-color: black;
   /* background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); */
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #9eb1bd;
 }
+
+
 .font-pop{
     font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -500px 0;
+  }
+  100% {
+    background-position: 500px 0;
+  }
+}
 
-.textColor {
-  font-size: 60px;
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #181717 0%,
+    #bbbbbb 50%,
+    #dbdbdb 80%,
+    #f0efef 100%
+  );
+  background-size: 1000px 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
-  /* -webkit-text-stroke: 1px #2575fc; Use a solid color for stroke */
+  animation: shimmer 6s infinite linear;
 }
-/* Add to your CSS file */
+
 .bounce-img {
   animation: bounceY 2s infinite ease-in;
 }
@@ -39,10 +56,10 @@ body {
   display: inline-block;
   padding-bottom: 4px;
 }
-.navbg{
+/* .navbg{
     background: linear-gradient(to right, #1a1a40, #13132B) no-repeat ;
 
-}
+} */
 
 @keyframes gradientShift {
   0% {
