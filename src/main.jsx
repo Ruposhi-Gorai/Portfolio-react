@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 
 import HomePage from "./Components/Home/HomePage";
 import About from "./Components/About/About";
-import Skills from "./Components/Skills";
+import Skills from "./Components/Skills.jsx";
 import Contact from "./Components/Contact";
 import Projects from "./Components/Projects";
 import Footer from "./Components/Footer";

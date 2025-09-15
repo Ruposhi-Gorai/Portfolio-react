@@ -8,12 +8,11 @@ import { motion } from "framer-motion";
 export default function Projects() {
   const [project, setProject] = useState([]);
   useEffect(() => {
-    const githubToken = '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';
     axios
       .get("https://api.github.com/users/Ruposhi-Gorai/repos", {
-           headers:{
-          Authorization:`token${githubToken}`,
-        },
+        //    headers:{
+        //   Authorization:`token${githubToken}`,
+        // },
         params: {
           per_page: 6,
           sort: "updated",
