@@ -6,25 +6,41 @@ import Social from "../social/Social";
 import image from "../../assets/images/image.png";
 import { TypeOutlineIcon } from "lucide-react";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
+import { motion } from "framer-motion";
 
 export default function () {
-  const [startTyping, setStartTyping] = useState(false);
-
+  const itemVariants = {
+    hidden: { x: -100, opacity: 0 }, // start from left
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: "linear" },
+    },
+  };
   return (
     <>
-      <div >
-        <h2 className="text-3xl  text-[#00FFFF] font-light  p-6 tracking-[8px] text-center sm:text-4xl">
+      <div>
+        <h2 className="text-3xl  text-[#00FFFF] font-light mt-5  p-6 tracking-[8px] text-center sm:text-4xl">
           About Me
         </h2>
         <div className="flex flex-col  md:flex-row gap-8 pt-5 justify-center items-center md:my-20 px-4 md:px-10 w-full ">
-            <div className="w-full lg:w-[40%] lg:ps-10 lg:mx-10 flex items-center justify-center">
-          <div className="  overflow-hidden hover:scale-105 transition-all duration-300 rounded-2xl hover:shadow-[0_0_25px_#14b8a6]">
+          <div className="w-full lg:w-[40%] lg:ps-10 lg:mx-10 flex items-center justify-center">
+            {/* <div className="  overflow-hidden hover:scale-105 transition-all duration-300 rounded-2xl hover:shadow-[0_0_25px_#14b8a6]">
             <img src={image} alt="" className="w-full block" />
-          </div>
+          </div> */}
+            <motion.div
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="visible" // triggers when scrolled into view
+              viewport={{ once: true, amount: 0.3 }} // animate only once, 30% visible
+              className="overflow-hidden hover:scale-105 transition-all duration-300 rounded-2xl hover:shadow-[0_0_25px_#14b8a6]"
+            >
+              <img src={image} alt="" className="w-full block" />
+            </motion.div>
           </div>
           <div className="w-full lg:w-[50%]  lg:mx-10">
-            <h1 className=" text-2xl  xl:text-4xl text-gray-200 italic text-center items-center flex gap-2 px-5 lg:px-10">
-              ~ Meet the girl Behind the Code{" "}
+            <h1 className=" text-2xl  xl:text-4xl text-gray-200  text-center items-center flex gap-2 px-5 lg:px-10">
+              Know Me{" "}
               <LiaLaptopCodeSolid
                 size={60}
                 className="text-teal-700  drop-shadow-[0_0_20px_#14b8a6] "
