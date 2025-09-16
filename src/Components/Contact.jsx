@@ -5,7 +5,7 @@ import { CiLocationOn, CiMail } from "react-icons/ci";
 export default function Contact() {
   return (
     <>
-      <div className=" w-full md:flex items-center  justify-center gap-10 py-10 my-10 text-gray-100">
+      <div id="contact" className=" w-full md:flex items-center  justify-center gap-10 py-10 my-10 text-gray-100">
         <div className="lg:w-[580px] flex flex-wrap w-[30%] flex-col gap-8 text-gray-300 py-10 px-10 mt-1">
           <motion.h1
             initial={{ x: -200, opacity: 0 }}

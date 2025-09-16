@@ -15,7 +15,7 @@ export default function () {
   };
   return (
     <>
-      <div className="md:mt-[10px] h-[900px] font-mono flex flex-col-reverse md:flex-row  justify-around items-center gap-5 px-28 py-20 w-full max-w-full overflow-x-hidden ">
+<div className="md:mt-[10px] min-h-[900px] font-mono flex flex-col-reverse md:flex-row justify-around items-center gap-5 px-5 md:px-28 py-10 md:py-20 w-full max-w-full overflow-x-hidden">
         <div>
           <Intro />
         </div>

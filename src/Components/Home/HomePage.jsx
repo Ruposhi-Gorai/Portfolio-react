@@ -6,8 +6,10 @@ import "../../assets/css/home.css";
 export default function HomePage() {
   return (
     <>
+    <div id="home" className="pb-20">
       <NavSection />
       <HeroSection />
+      </div>
     </>
   );
 }

@@ -3,6 +3,7 @@ import { ReactTyped } from "react-typed";
 import "../../assets/css/home.css";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
+import { Link } from "react-scroll";
 
 
 export default function Intro() {
@@ -25,7 +26,7 @@ export default function Intro() {
     },
   };
 
-    const handleClick = () => {
+  const handleClick = () => {
     toast.success("Thank you!😊", {
       position: "top-right",
       autoClose: 3000, // closes in 3 sec
@@ -78,18 +79,26 @@ export default function Intro() {
 
       <motion.div
         variants={itemVariants}
-        className="flex flex-col md:flex-row mx-5 md:mx-0 px-2 gap-4"
+        className="flex flex-row md:flex-row gap-4 w-full items-start max-w-md"
       >
-        <button className="bg-gradient-to-r from-[#11c5cb] font-pop to-[#02795f] text-white py-3 md:py-2 mt-5 px-4 rounded-full cursor-pointer hover:scale-105 transition-transform">
-          View My Works
+        <button className="bg-gradient-to-r w-40 md:w-auto from-[#11c5cb] font-pop to-[#02795f] text-white py-3 md:py-2 mt-5 px-4 md:px:6 rounded-full cursor-pointer hover:scale-105 transition-transform">
+          <Link
+            to="projects" // scrolls to section with id="projects"
+            smooth={true}
+            duration={600}
+            offset={-64} // adjust for navbar height
+            className="cursor-pointer"
+          >
+            View My Works
+          </Link>
         </button>
         <button
-          className="bg-gradient-to-r border border-teal-400 shadow-[0_0_25px_5px_rgba(0,255,255,0.2)] hover:shadow-[0_0_25px_5px_rgba(0,255,255,0.5)] text-white py-3 md:py-2 mt-5 px-4 rounded-full cursor-pointer hover:scale-105 transition-transform"
+          className="bg-gradient-to-r border w-40 md:w-auto border-teal-400 shadow-[0_0_25px_5px_rgba(0,255,255,0.2)] hover:shadow-[0_0_25px_5px_rgba(0,255,255,0.5)] text-white py-3 md:py-2 mt-5 px-4 md:px-6 rounded-full cursor-pointer hover:scale-105 transition-transform"
           onClick={handleClick}
         >
           Hire me
         </button>
-              <ToastContainer />
+        <ToastContainer />
       </motion.div>
     </motion.div>
   );

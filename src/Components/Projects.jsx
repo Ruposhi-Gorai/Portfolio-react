@@ -43,7 +43,7 @@ export default function Projects() {
   };
   return (
     <>
-      <div className="mb-20 py-10">
+      <div id="projects" className="mb-20 py-5">
         <div className="p-5">
           <Pheading />
         </div>

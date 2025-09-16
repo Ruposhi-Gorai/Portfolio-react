@@ -1,40 +1,68 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react"; // for icons
+import { Menu, X } from "lucide-react";
+import { Link } from "react-scroll";
+import '../../assets/css/home.css'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  const menuItems = [
+    { name: "Home", to: "home" },
+    { name: "About", to: "about" },
+    { name: "Skills", to: "skills" },
+    { name: "Projects", to: "projects" },
+    { name: "Contact", to: "contact" },
+  ];
+
   return (
-    <nav className=" text-white border-b-[1px] border-gray-900  shadow-[0px_8px_20px_rgba(0,0,0,0.5)] fixed top-0 left-0 bg-black w-full max-w-full overflow-x-hidden z-50  ">
+    <nav className=" fixed top-0 left-0 w-full bg-[#000000] shadow-md z-50 border-b border-gray-900">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
         {/* Logo */}
-        <h1 className="text-2xl font-semibold text-teal-400 drop-shadow-[0_0_10px_#14b8a6] ">{"{RG}"}</h1>
+        <h1 className="text-2xl font-semibold text-teal-400 drop-shadow-[0_0_10px_#14b8a6]">
+          {"{RG}"}
+        </h1>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex md:space-x-8 text-lg">
-          <li><a href="#home" className="hover:text-teal-400 hover:border-b">Home</a></li>
-          <li><a href="#about" className="hover:text-teal-400 hover:border-b">About</a></li>
-          <li><a href="#about" className="hover:text-teal-400 hover:border-b">Skills</a></li>
-          <li><a href="#projects" className="hover:text-teal-400 hover:border-b">Projects</a></li>
-          <li><a href="#contact" className="hover:text-teal-400 hover:border-b">Contact</a></li>
+          {menuItems.map((item) => (
+            <li key={item.to}>
+              <Link
+                to={item.to}
+                smooth={true}
+                duration={600}
+                spy={true}
+                offset={-60} // to consider navbar height
+                className="cursor-pointer hover:text-teal-400 hover:border-b"
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden focus:outline-none"
-        >
+        <button onClick={() => setOpen(!open)} className="md:hidden focus:outline-none">
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {open && (
-        <ul className="md:hidden bg-[#20203de3] h-screen  px-4 py-6">
-          <li><a href="#home" className="block hover:text-teal-400 p-4">Home</a></li>
-          <li><a href="#about" className="block hover:text-teal-400 p-4">About</a></li>
-          <li><a href="#projects" className="block hover:text-teal-400 p-4">Projects</a></li>
-          <li><a href="#contact" className="block hover:text-teal-400 p-4">Contact</a></li>
+        <ul className="md:hidden bg-[#000000e3] text-white h-screen px-4 py-6 flex flex-col gap-4">
+          {menuItems.map((item) => (
+            <li key={item.to}>
+              <Link
+                to={item.to}
+                smooth={true}
+                duration={600}
+                offset={-60}
+                className="block hover:text-teal-400 p-4 cursor-pointer"
+                onClick={() => setOpen(false)}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       )}
     </nav>

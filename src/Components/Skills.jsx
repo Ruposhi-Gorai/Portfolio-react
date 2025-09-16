@@ -12,7 +12,7 @@ export default function Skills() {
 
   return (
     <>
-      <div className="min-h-screen  text-gray-300 py-10">
+      <div id="skills" className="min-h-screen  text-gray-300 pb-10">
         <h1 className="md:text-5xl text-4xl font-light  text-[#00FFFF] tracking-[8px] text-center  p-10 md:my-5 ">
           My Skills
         </h1>

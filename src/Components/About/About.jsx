@@ -19,8 +19,8 @@ export default function () {
   };
   return (
     <>
-      <div>
-        <h2 className="text-3xl  text-[#00FFFF] font-light mt-5  p-6 tracking-[8px] text-center sm:text-4xl">
+      <div id="about" className="md:mt-15">
+        <h2 className="text-3xl  text-[#00FFFF] font-light p-6 tracking-[8px] text-center sm:text-4xl">
           About Me
         </h2>
         <div className="flex flex-col  md:flex-row gap-8 pt-5 justify-center items-center md:my-20 px-4 md:px-10 w-full ">
