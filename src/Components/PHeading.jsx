@@ -16,7 +16,7 @@ export default function Pheading() {
   return (
     <>
   
-      <div className="slider-container text-[#00FFFF] add-flex justify-center font-light">
+      <div className="slider-container text-teal-500 add-flex justify-center font-light">
         <h1
           className="tracking-[2px] sm:tracking-[8px] font-light
            text-3xl md:text-5xl py-5"

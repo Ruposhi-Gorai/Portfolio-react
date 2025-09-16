@@ -43,14 +43,14 @@ export default function Projects() {
   };
   return (
     <>
-      <div id="projects" className="mb-20 py-5">
+      <div id="projects" className="mb-20 py-5 px-3 md:px-0">
         <div className="p-5">
           <Pheading />
         </div>
-        <div className="w-full md:flex flex-wrap items-center gap-8 md:my-10 px-5 md:px-15 md:justify-center space-y-3">
+        <div className="w-full space-y-6 md:flex flex-wrap items-center gap-8 md:my-10 px-5 md:px-15 md:justify-center md:space-y-3">
           {project.map((v, i) => (
             <motion.div
-              className="bg-[#43485734] border-teal-900 border-[1px] rounded-2xl shadow-lg md:w-[25%] md:min-h-[280px] p-10 transition-all hover:scale-[1.05] duration-300 hover:shadow-[0_0_25px_#14b8a6]"
+              className="bg-[#00000083] border-[#073030] border-[1px] rounded-2xl shadow-lg md:w-[25%] md:min-h-[280px] p-5 md:p-10 transition-all hover:scale-[1.05] drop-shadow-2xl duration-300 hover:shadow-[0_0_25px_#14b8a6]"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"

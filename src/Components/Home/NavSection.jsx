@@ -16,9 +16,9 @@ export default function Navbar() {
 
   return (
     <nav className=" fixed top-0 left-0 w-full bg-[#000000] shadow-md z-50 border-b border-gray-900">
-      <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-1 flex justify-between items-center h-16">
         {/* Logo */}
-        <h1 className="text-2xl font-semibold text-teal-400 drop-shadow-[0_0_10px_#14b8a6]">
+        <h1 className="text-2xl font-semibold text-gray-400 ">
           {"{RG}"}
         </h1>
 
