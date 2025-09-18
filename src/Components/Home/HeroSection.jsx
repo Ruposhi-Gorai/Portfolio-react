@@ -25,11 +25,12 @@ export default function () {
           animate="visible"
           className="flex flex-col gap-5 items-center"
         >
-          <div className="w-[180px] h-[180px] md:w-[320px] md:h-[320px] flex justify-center mt-15 my-5 items-center relative">
-            <div className="w-[180px] h-[180px] md:w-[320px] md:h-[320px] rounded-full overflow-hidden absolute shadow-[0_0_25px_15px_rgba(0,255,255,0.2)] hover:scale-105 hover:shadow-[0_0_25px_15px_#14b8a6] transition-all duration-300">
+          <div className="w-[180px] h-[180px] md:w-[250px] md:h-[250px] flex justify-center mt-15 my-5 items-center relative">
+            <div className="w-[180px] h-[180px] md:w-[250px] md:h-[250px] rounded-full overflow-hidden absolute shadow-[0_0_25px_15px_rgba(0,255,255,0.1)] hover:scale-105 hover:shadow-[0_0_25px_15px_rgba(0,255,255,0.3)] transition-all duration-300">
               <img src={myGif} alt="" className="img-fluid" />
             </div>
           </div>
+            {/* <p className="text-2xl p-2 text-gray-500 font-sans font-extralight">Based in INDIA</p> */}
           <Social />
         </motion.div>
       </div>

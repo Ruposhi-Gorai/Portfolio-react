@@ -14,7 +14,7 @@ export default function Projects() {
         //   Authorization:`token${githubToken}`,
         // },
         params: {
-          per_page: 6,
+          per_page: 5,
           sort: "updated",
           page: 1,
         },
@@ -50,14 +50,15 @@ export default function Projects() {
         <div className="w-full space-y-6 md:flex flex-wrap items-center gap-8 md:my-10 px-5 md:px-15 md:justify-center md:space-y-3">
           {project.map((v, i) => (
             <motion.div
-              className="bg-[#00000083] border-[#073030] border-[1px] rounded-2xl shadow-lg md:w-[25%] md:min-h-[280px] p-5 md:p-10 transition-all hover:scale-[1.05] drop-shadow-2xl duration-300 hover:shadow-[0_0_25px_#14b8a6]"
+              className="bg-[#00000083] border-[#073030] border-s-[1px] border-b-[1px] rounded-2xl shadow-lg md:w-[25%] md:min-h-[280px] p-5 md:p-10 transition-all hover:scale-[1.05] drop-shadow-2xl duration-300 hover:shadow-[0_0_25px_#14b8a6]"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               custom={i}
+              key={i}
             >
-              <ProjectCard item={v} key={i} />
+              <ProjectCard item={v} />
             </motion.div>
           ))}
         </div>

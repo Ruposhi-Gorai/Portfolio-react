@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-scroll";
+// import { Link } from "react-router";
 import '../../assets/css/home.css'
 
 export default function Navbar() {
@@ -15,12 +16,14 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className=" fixed top-0 left-0 w-full bg-[#000000] shadow-md z-50 border-b border-gray-900">
+    <nav className="navbar fixed top-0 left-0 w-full bg-[#000000] shadow-md z-50 border-b border-gray-900">
       <div className="max-w-7xl mx-auto px-4 md:px-1 flex justify-between items-center h-16">
         {/* Logo */}
-        <h1 className="text-2xl font-semibold text-gray-400 ">
-          {"{RG}"}
+        <Link to="home" smooth={true} duration={600} offset={-60}>
+        <h1 className="text-[22px] md:text-2xl font-semibold text-gray-300 cursor-pointer hover:text-white transition-all duration-100 ">
+         <span className="text-emerald-600">//</span>Ruposhi.
         </h1>
+        </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex md:space-x-8 text-lg">

@@ -16,12 +16,12 @@ export default function Pheading() {
   return (
     <>
   
-      <div className="slider-container text-teal-500 add-flex justify-center font-light">
+      <div className="slider-container text-3xl md:text-7xl font-medium font-sans text-gray-300 add-flex justify-center">
         <h1
-          className="tracking-[2px] sm:tracking-[8px] font-light
-           text-3xl md:text-5xl py-5"
+          className="tracking-[2px] sm:tracking-[8px]
+           text-3xl md:text-7xl py-5"
         >
-          RECENT PROJECTS
+          RECENT WORKS
         </h1>
       </div>
     </>

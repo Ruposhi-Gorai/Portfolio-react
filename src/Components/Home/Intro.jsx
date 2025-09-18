@@ -84,13 +84,14 @@ export default function Intro() {
           typeSpeed={50}
           loop={true}
         />
+        
       </motion.div>
 
       <motion.div
         variants={itemVariants}
         className="flex flex-col md:flex-row gap-4 w-full md:items-start items-center max-w-md"
       >
-        <button className="bg-gradient-to-r w-40 md:w-auto from-[#11c5cb] font-pop to-[#02795f] text-white py-3 md:py-2 mt-5 px-4 md:px:6 rounded-full cursor-pointer hover:scale-105 transition-transform">
+        <button className="bg-gradient-to-r  from-teal-400 via-cyan-500 to-teal-700 text-white w-40 md:w-auto font-pop  py-3 md:py-2 mt-5 px-4 md:px:6 rounded-full cursor-pointer hover:scale-105 transition-transform">
           <Link
             to="projects" // scrolls to section with id="projects"
             smooth={true}
@@ -101,12 +102,16 @@ export default function Intro() {
             View My Works
           </Link>
         </button>
+        {/* <button className="px-6 py-2 rounded-full bg-gradient-to-r from-teal-400 via-cyan-500 to-teal-600 text-white font-medium shadow-lg hover:scale-105 transition">
+  View My Works
+</button> */}
         <button
           className="bg-gradient-to-r border w-40 md:w-auto border-teal-400 shadow-[0_0_25px_5px_rgba(0,255,255,0.2)] hover:shadow-[0_0_25px_5px_rgba(0,255,255,0.5)] text-white py-3 md:py-2 mt-5 px-4 md:px-6 rounded-full cursor-pointer hover:scale-105 transition-transform"
           onClick={handleClick}
         >
           Hire me
         </button>
+         
         <ToastContainer />
       </motion.div>
     </motion.div>

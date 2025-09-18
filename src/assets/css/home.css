@@ -3,11 +3,16 @@
 
 body {
 
-  background: linear-gradient(145deg, #000000, #091d20);
+    background: linear-gradient(90deg, #000000, #030c0d);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #9eb1bd;
+
+}
+.homepage{
+    background: linear-gradient(90deg, #000000, #030c0d);
+
 }
 
 .font-pop {
@@ -38,10 +43,6 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 6s infinite linear;
-}
-
-.bounce-img {
-  animation: bounceY 2s infinite ease-in;
 }
 
 .tagline {
@@ -120,18 +121,7 @@ body {
   box-shadow: 0 2px 10px rgba(0, 200, 255, 0.5);
 }
 
-.navbar::before {
-  content: "";
-  position: absolute;
-  top: -10px; /* glow above navbar */
-  left: 0;
-  width: 100%;
-  height: 45px; /* height of glow */
-  pointer-events: none;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.15) 0%,
-    transparent 80%
-  );
-  filter: blur(15px);
+.navbar{
+  background: linear-gradient(90deg, #000000, #030c0d);
+
 }

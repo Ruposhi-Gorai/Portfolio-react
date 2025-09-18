@@ -26,7 +26,7 @@ export default function SkillButton({ item }) {
 
   return (
     <div>
-      <div className="flex gap-1  rounded-full border border-teal-500 items-center px-3 py-2 shadow-[0_0_10px_2px_rgba(0,255,255,0.2)] hover:shadow-[0_0_15px_5px_#14b8a6] transition-all duration-300">
+      <div className="flex gap-1  rounded-full border border-teal-900 items-center px-3 py-2 shadow-[0_0_10px_2px_rgba(0,255,255,0.2)] hover:shadow-[0_0_15px_5px_#14b8a6] transition-all duration-300">
         <Icon className="text-[20px]" />
         <div className="text-[14px] md:text-[16px]">{item.name}</div>
       </div>
