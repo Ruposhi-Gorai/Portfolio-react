@@ -4,6 +4,7 @@ import "../../assets/css/home.css";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import { Link } from "react-scroll";
+import Social from "../social/Social";
 
 const isMobile = () => window.innerWidth <= 768;
 
@@ -31,7 +32,13 @@ export default function Intro() {
     visible: {
       x: 0,
       opacity: 1,
-       transition: { duration: duration, ease: "easeOut" },
+      transition: { duration: duration, ease: "easeOut" },
+    },
+  };
+  const itemVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
     },
   };
 
@@ -56,42 +63,34 @@ export default function Intro() {
     >
       <motion.h3
         variants={itemVariants}
-        className="text-[40px] md:text-8xl px-2 md:py:2 font-light text-gray-200"
+        className="text-[36px] md:text-8xl px-2 md:py:2 font-light md:pb-5 text-gray-200"
       >
         Hi I'm
       </motion.h3>
 
       <motion.div
         variants={itemVariants}
-        className="text-[60px] md:text-8xl text-gray-900 leading-20 font-light shimmer-text px-2 md:py-3"
+        className="text-[50px] md:text-8xl text-gray-900 sm:leading-20 font-light shimmer-text px-2 md:py-3"
       >
         RUPOSHI GORAI
       </motion.div>
 
       <motion.div
-        variants={itemVariants}
-        className="text-[18px] font-light md:text-2xl mb-5 px-2 py-2"
+        variants={itemVariant}
+        className="text-[18px] font-light font-pop md:text-2xl text-gray-500 sm:my-5 px-2 py-2"
       >
         <ReactTyped
-          strings={[
-            "Full Stack Developer",
-            "Software Developer",
-            "FrontEnd Developer",
-            "Backend Developer",
-            "UI/UX Designer",
-            "MERN Stack Developer",
-          ]}
+          strings={["A Full Stack Developer, based in India"]}
           typeSpeed={50}
-          loop={true}
+          startDelay={1500}
         />
-        
       </motion.div>
 
       <motion.div
         variants={itemVariants}
-        className="flex flex-col md:flex-row gap-4 w-full md:items-start items-center max-w-md"
+        className="flex flex-col md:flex-row px-2 sm:gap-4 gap-2 w-full md:items-start items-center max-w-xl"
       >
-        <button className="bg-gradient-to-r  from-teal-400 via-cyan-500 to-teal-700 text-white w-40 md:w-auto font-pop  py-3 md:py-2 mt-5 px-4 md:px:6 rounded-full cursor-pointer hover:scale-105 transition-transform">
+        <button className="bg-gradient-to-r from-cyan-500 via-cyan-600 to-cyan-700 text-gray-100 w-40 md:w-auto font-pop  py-2 md:py-2 mt-5 px-3 md:px:6 rounded-full cursor-pointer hover:scale-105 transition-transform">
           <Link
             to="projects" // scrolls to section with id="projects"
             smooth={true}
@@ -102,16 +101,14 @@ export default function Intro() {
             View My Works
           </Link>
         </button>
-        {/* <button className="px-6 py-2 rounded-full bg-gradient-to-r from-teal-400 via-cyan-500 to-teal-600 text-white font-medium shadow-lg hover:scale-105 transition">
-  View My Works
-</button> */}
         <button
-          className="bg-gradient-to-r border w-40 md:w-auto border-teal-400 shadow-[0_0_25px_5px_rgba(0,255,255,0.2)] hover:shadow-[0_0_25px_5px_rgba(0,255,255,0.5)] text-white py-3 md:py-2 mt-5 px-4 md:px-6 rounded-full cursor-pointer hover:scale-105 transition-transform"
+          className="bg-gradient-to-r border w-40 md:w-auto border-cyan-400 shadow-[0_4px_12px_rgba(6,182,212,0.5)]  hover:shadow-[0_0_25px_5px_rgba(6, 182, 212, 0.5)] text-white py-2 md:py-2 mt-5 px-2 md:px-6 rounded-full cursor-pointer hover:scale-105 transition-transform"
           onClick={handleClick}
         >
           Hire me
         </button>
-         
+        <Social />
+
         <ToastContainer />
       </motion.div>
     </motion.div>

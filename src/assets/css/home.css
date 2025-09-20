@@ -28,12 +28,14 @@ body {
   100% {
     background-position: 500px 0;
   }
+    0% {
+    color: white;
+  }
 }
 
 .shimmer-text {
   background: linear-gradient(
     90deg,
-    #181717 0%,
     #bbbbbb 50%,
     #dbdbdb 80%,
     #f0efef 100%
@@ -42,7 +44,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 6s infinite linear;
+  /* animation: shimmer 6s linear; */
 }
 
 .tagline {
@@ -67,6 +69,7 @@ body {
   100% {
     background-position: 0% 50%;
   }
+  
 }
 
 @keyframes bounceY {
@@ -86,7 +89,10 @@ body {
   color: #c492fe !important;
   border-bottom: 1px solid #c492fe;
 }
+.cyan-bg{
+    background: linear-gradient(135deg, #0e91a8, #0ea5e9, #243b61);
 
+}
 .fix-nav {
   position: fixed;
   width: 100%;

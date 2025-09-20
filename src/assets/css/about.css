@@ -20,7 +20,7 @@
 }  */
 ul.custom-dash li::marker {
   content: "# ";
-  color: rgb(89, 165, 165);
+  color: rgb(89, 150, 165);
 }
 /* .add-image{
   background: url('../images/image.png') no-repeat center;

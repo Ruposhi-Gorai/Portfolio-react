@@ -1,5 +1,5 @@
 import React from "react";
-import myGif from "../../assets/images/4.jpg";
+import myGif from "../../assets/images/5.jpg";
 import Intro from "./Intro";
 import Social from "../social/Social";
 import { motion } from "framer-motion";
@@ -15,24 +15,16 @@ export default function () {
   };
   return (
     <>
-<div className="md:mt-[10px] min-h-[900px] font-mono flex flex-col-reverse md:flex-row justify-around items-center gap-5 px-5 md:px-28 py-10 mt-2 md:py-20 w-full max-w-full overflow-x-hidden">
-        <div>
+      <div className=" md:my-20 font-mono flex flex-col  md:flex-row justify-center gap-5 px-5 md:px-28  items-center mt-2 md:py-20 w-full max-w-full overflow-x-hidden">
+        <div className="">
+        <div className=" flex  md:justify-start justify-center mt-12 px-3 my-5 items-center md:items-start ">
+          <div className="w-[70px] h-[70px] md:w-[70px] mt-10 md:h-[70px] rounded-full overflow-hidden  transition-all duration-300">
+            <img src={myGif} alt="" className="img-fluid" />
+          </div>
+          </div> 
           <Intro />
         </div>
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
-          className="flex flex-col gap-5 items-center"
-        >
-          <div className="w-[180px] h-[180px] md:w-[250px] md:h-[250px] flex justify-center mt-15 my-5 items-center relative">
-            <div className="w-[180px] h-[180px] md:w-[250px] md:h-[250px] rounded-full overflow-hidden absolute shadow-[0_0_25px_15px_rgba(0,255,255,0.1)] hover:scale-105 hover:shadow-[0_0_25px_15px_rgba(0,255,255,0.3)] transition-all duration-300">
-              <img src={myGif} alt="" className="img-fluid" />
-            </div>
-          </div>
-            {/* <p className="text-2xl p-2 text-gray-500 font-sans font-extralight">Based in INDIA</p> */}
-          <Social />
-        </motion.div>
+
       </div>
     </>
   );

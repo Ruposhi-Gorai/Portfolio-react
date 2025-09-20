@@ -26,14 +26,6 @@ export default function () {
     },
   };
 
-  const slideRight = {
-    hidden: { opacity: 0, x: 100 }, // start off-screen to the right
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.2, ease: "easeOut" },
-    },
-  };
   return (
     <>
       <div id="about" className="md:mt-15 mb-10">
@@ -41,10 +33,8 @@ export default function () {
           About Me
         </h2> */}
         <motion.h2
-          variants={slideRight}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          animate="visible"
           className="text-3xl md:text-7xl  font-sans  text-gray-300 font-medium p-6 tracking-[8px] text-center sm:text-4xl"
         >
           About Me
@@ -56,7 +46,7 @@ export default function () {
               initial="hidden"
               whileInView="visible" // triggers when scrolled into view
               viewport={{ once: true, amount: 0.5 }} // animate only once, 30% visible
-              className="overflow-hidden hover:scale-105 transition-all duration-300 rounded-2xl hover:shadow-[0_0_25px_#14b8a6]"
+              className="overflow-hidden hover:scale-105 transition-all duration-300 rounded-2xl "
             >
               <img src={image} alt="" className="w-full block" />
             </motion.div>
@@ -66,10 +56,10 @@ export default function () {
               Know Me
               <LiaLaptopCodeSolid
                 size={60}
-                className="text-teal-700  drop-shadow-[0_0_20px_#14b8a6] "
+                className="text-cyan-700  "
               />{" "}
             </h1>
-            <div className="md:w-[90%] mt-6 mx-3 text-gray-300  px-4 md:px-6 text-[14px] md:text-[18px] font-light bg-[#151616a2] py-10 md:my-10 rounded-2xl shadow-[0_0_5px_0px_rgba(0,255,255,0.1)] group transition duration-300 hover:scale-102 hover:shadow-[0_0_25px_#14b8a6] ">
+            <div className="sm:w-[100%] xl:w-[90%] mt-6 mx-3 text-gray-300  px-4 md:px-6 text-[14px] xl:text-[18px] font-light bg-[#151616a2] py-10 md:my-10 rounded-2xl shadow-[0_0_5px_0px_rgba(0,255,255,0.1)] group transition duration-300 hover:scale-102 hover:shadow-[0_10px_30px_0_rgba(6,182,212,0.5)]">
               <p>
                 Hi, I’m Ruposhi, a curious developer who loves exploring new
                 tech and building something impactful. Beyond coding, I love
@@ -77,7 +67,7 @@ export default function () {
                 connections.
               </p>
               <div className="py-5">
-                <h2 className="text-xl font-medium py-1 text-teal-300">
+                <h2 className="text-xl font-medium py-1 text-cyan-400">
                   WHO AM I?
                 </h2>
                 <ul className=" custom-dash list-disc ps-6 md:leading-[38px]">

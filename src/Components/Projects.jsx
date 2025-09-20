@@ -50,7 +50,7 @@ export default function Projects() {
         <div className="w-full space-y-6 md:flex flex-wrap items-center gap-8 md:my-10 px-5 md:px-15 md:justify-center md:space-y-3">
           {project.map((v, i) => (
             <motion.div
-              className="bg-[#00000083] border-[#073030] border-s-[1px] border-b-[1px] rounded-2xl shadow-lg md:w-[25%] md:min-h-[280px] p-5 md:p-10 transition-all hover:scale-[1.05] drop-shadow-2xl duration-300 hover:shadow-[0_0_25px_#14b8a6]"
+              className=" border-cyan-700  border-[0.2px] rounded-2xl shadow-lg sm:w-[40%] xl:w-[25%] md:min-h-[280px] p-5 md:p-10 transition-all hover:scale-[1.05] hover:shadow-[0_2px_30px_0_rgba(6,182,212,0.5)] drop-shadow-2xl duration-300 ]"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
