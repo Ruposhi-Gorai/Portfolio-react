@@ -59,7 +59,7 @@ export default function Intro() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="font-pop py-2 md:mt-8 text-center md:text-start"
+      className="font-pop py-2 md:mt-8 text-center  md:text-start"
     >
       <motion.h3
         variants={itemVariants}
@@ -70,7 +70,7 @@ export default function Intro() {
 
       <motion.div
         variants={itemVariants}
-        className="text-[50px] md:text-8xl text-gray-900 sm:leading-20 font-light shimmer-text px-2 md:py-3"
+        className="text-[46px] md:text-8xl text-gray-900 leading-15 sm:leading-20 font-light shimmer-text px-2 md:py-3"
       >
         RUPOSHI GORAI
       </motion.div>

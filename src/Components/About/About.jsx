@@ -59,7 +59,7 @@ export default function () {
                 className="text-cyan-700  "
               />{" "}
             </h1>
-            <div className="sm:w-[100%] xl:w-[90%] mt-6 mx-3 text-gray-300  px-4 md:px-6 text-[14px] xl:text-[18px] font-light bg-[#151616a2] py-10 md:my-10 rounded-2xl shadow-[0_0_5px_0px_rgba(0,255,255,0.1)] group transition duration-300 hover:scale-102 hover:shadow-[0_10px_30px_0_rgba(6,182,212,0.5)]">
+            <div className="sm:w-[100%] xl:w-[90%] mt-6 mx-3 text-gray-400  px-4 md:px-6 text-[16px] xl:text-[18px] font-light bg-[#151616a2] py-10 md:my-10 rounded-2xl shadow-[0_0_5px_0px_rgba(0,255,255,0.1)] group transition duration-300 hover:scale-102 hover:shadow-[0_10px_30px_0_rgba(6,182,212,0.5)]">
               <p>
                 Hi, I’m Ruposhi, a curious developer who loves exploring new
                 tech and building something impactful. Beyond coding, I love
