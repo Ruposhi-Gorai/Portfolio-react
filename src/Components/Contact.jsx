@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { CiLocationOn, CiMail } from "react-icons/ci";
+import { toast } from "react-toastify";
 
 export default function Contact() {
+
+  // const contactData = []
+
+  const [inputData, setInputData] = useState('')
+  const formData = JSON.parse(localStorage.getItem('userData')) ?? []
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+      const data = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      location: e.target.location.value,
+      message: e.target.message.value,
+    };
+
+    const finalData = [data, ...formData]
+
+    localStorage.setItem('userData', JSON.stringify(finalData))
+    console.log(finalData);
+    e.target.reset();
+
+    toast.success('thanks for contacting me!')
+    
+
+  }
+
   return (
     <>
       <div id="contact" className=" w-full md:flex items-center  justify-center gap-10 py-10 my-10 text-gray-100">
@@ -50,38 +77,23 @@ export default function Contact() {
             Contact Me
           </h2>
 
-          <form className="mx-auto max-w-[400px] md:max-w-[490px] sm:mt-20 lg:mt-8 ">
+          <form onSubmit={handleSubmit}
+          className="mx-auto max-w-[400px] md:max-w-[490px] sm:mt-20 lg:mt-8 ">
             <div className="grid grid-cols-1 gap-x-6 gap-y-1 sm:grid-cols-2">
-              <div>
+              <div className="sm:col-span-2">
                 <label
-                  for="first-name"
+                  for="location"
                   className="block text-sm font-semibold leading-6 text-gray-500"
                 >
-                  First name
+                  Full Name
                 </label>
-                <div className="mt-2.5">
+                <div className="mt-2">
                   <input
                     type="text"
-                    name="first-name"
-                    id="first-name"
-                    autocomplete="given-name"
-                    className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1 shadow-sm ring-1 ring-inset ring-cyan-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-              <div>
-                <label
-                  for="last-name"
-                  className="block text-sm font-semibold leading-6 text-gray-500"
-                >
-                  Last name
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="last-name"
-                    id="last-name"
-                    autocomplete="family-name"
+                    name="name"
+                    value= {inputData.name}
+                    onChange={(event) => setInputData(event.target.value)}
+                    autocomplete="location"
                     className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1 shadow-sm ring-1 ring-inset ring-cyan-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -97,6 +109,8 @@ export default function Contact() {
                   <input
                     type="text"
                     name="location"
+                    value= {inputData.location}
+                    onChange={(event) => setInputData(event.target.value)}
                     autocomplete="location"
                     className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1 shadow-sm ring-1 ring-inset ring-cyan-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6"
                   />
@@ -114,6 +128,8 @@ export default function Contact() {
                     type="email"
                     name="email"
                     id="email"
+                    value= {inputData.email}
+                    onChange={(event) => setInputData(event.target.value)}
                     autocomplete="email"
                     className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1  shadow-sm ring-1 ring-inset ring-cyan-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6"
                   />
@@ -148,6 +164,8 @@ export default function Contact() {
                     name="message"
                     id="message"
                     rows="4"
+                    value= {inputData.message}
+                    onChange={(event) => setInputData(event.target.value)}
                     className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1  shadow-sm ring-1 ring-inset ring-cyan-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6"
                   ></textarea>
                 </div>
