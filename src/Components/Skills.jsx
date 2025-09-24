@@ -19,7 +19,7 @@ export default function Skills() {
 
   return (
     <>
-      <div id="skills"   className="min-h-screen  mt-20 py-10 pb-10">
+      <div id="skills"   className=" sm:my-20 py-10 sm:h-screen sm:pb-10">
         <h1 className="md:text-7xl  font-sans font-medium text-4xl text-gray-300 tracking-[8px] text-center  p-10 md:py-10 md:my-5 ">
           My Skills
         </h1>

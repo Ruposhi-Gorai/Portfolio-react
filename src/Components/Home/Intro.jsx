@@ -43,11 +43,11 @@ export default function Intro() {
   };
 
   const handleClick = () => {
-    toast.success("Thank you!😊", {
+    toast.success("Thank you!", {
       position: "top-right",
       autoClose: 3000, // closes in 3 sec
       hideProgressBar: false,
-      theme: "dark",
+      theme: "colored",
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
@@ -63,16 +63,19 @@ export default function Intro() {
     >
       <motion.h3
         variants={itemVariants}
-        className="text-[36px] md:text-8xl px-2 md:py:2 font-light md:pb-5 text-gray-200"
+        className="text-[36px] md:text-7xl px-2 md:py:2 font-medium md:pb-5  text-emerald-500"
+        //  style={{fontFamily: '"Dancing Script", cursive'}}
+
       >
         Hi I'm
       </motion.h3>
 
       <motion.div
         variants={itemVariants}
-        className="text-[46px] md:text-8xl text-gray-900 leading-15 sm:leading-20 font-light shimmer-text px-2 md:py-3"
+        className="text-[46px] md:text-8xl text-gray-200 leading-15 sm:leading-20 font-medium  px-2 md:py-3"
+        style={{fontFamily: '"Dancing Script", cursive'}}
       >
-        RUPOSHI GORAI
+        Ruposhi Gorai
       </motion.div>
 
       <motion.div

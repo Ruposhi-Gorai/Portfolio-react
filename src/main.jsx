@@ -11,13 +11,17 @@ import Footer from "./Components/Footer";
 import NavSection from "./Components/Home/NavSection";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <NavSection />
-    <HomePage />
-    <About />
-    <Skills />
-    <Projects />
-    <Contact />
-    <Footer />
-  </StrictMode>
+  <>
+
+
+      <NavSection />
+      <HomePage />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+    
+
+  </>
 );
