@@ -117,13 +117,15 @@ export default function Projects() {
     <>
       <div id="projects" className="mb-20 py-5 md:px-0">
         <ToastContainer theme="colored" />
-        <div className="pb-10">
-          <Pheading />
+        <div>
+            <h1 className="md:text-5xl  font-sans font-medium text-4xl text-gray-300 tracking-[4px] text-center  p-10 md:p-3 md:my-5 ">
+          Latest Projects
+        </h1>
         </div>
-        <div className="w-full space-y-6 md:flex flex-wrap items-center gap-8 md:my-10 px-8 md:px-15 md:justify-center md:space-y-3">
-          {project.slice(0, visibleCount).map((v, i) => (
+        <div className="w-full space-y-6 md:flex flex-wrap items-center gap-6 md:mt-10 px-8 md:py-5 md:px-15 md:justify-center md:space-y-3">
+          {project.slice(0, visibleCount+3).map((v, i) => (
             <motion.div
-              className="border-cyan-700 border-[0.2px] rounded-2xl shadow-lg sm:w-[40%] xl:w-[25%] md:min-h-[280px] p-5 md:p-10 transition-all hover:scale-[1.05] hover:shadow-[0_2px_30px_0_rgba(6,182,212,0.5)] drop-shadow-2xl duration-300"
+              className="border-cyan-700 border-[0.2px] rounded-2xl shadow-lg sm:w-[40%] xl:w-[25%] md:h-[260px] p-5 md:p-8 transition-all hover:scale-[1.05] hover:shadow-[0_2px_30px_0_rgba(6,182,212,0.5)] drop-shadow-2xl duration-300"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"

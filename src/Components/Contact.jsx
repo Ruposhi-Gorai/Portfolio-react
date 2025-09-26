@@ -72,14 +72,14 @@ export default function Contact() {
          
         </div>
 
-        <div className="px-10 py-15 ">
-          <h2 className="text-3xl  text-[#ffffff] font-light  p-5 tracking-[8px] text-center sm:text-4xl">
+        <div className="px-10 md:w-[480px] py-15 ">
+          <h2 className="text-3xl  text-gray-300 font-medium p-5 tracking-[4px] text-center sm:text-4xl">
             Contact Me
           </h2>
 
           <form onSubmit={handleSubmit}
-          className="mx-auto max-w-[400px] md:max-w-[490px] sm:mt-20 lg:mt-8 ">
-            <div className="grid grid-cols-1 gap-x-6 gap-y-1 sm:grid-cols-2">
+          className="mx-auto w-full max-w-[400px] md:max-w-[480px] sm:mt-20 lg:mt-8 ">
+            <div className="grid grid-cols-1 gap-x-6 gap-y-1 w-full sm:grid-cols-2">
               <div className="sm:col-span-2">
                 <label
                   for="location"

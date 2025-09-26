@@ -8,7 +8,7 @@ export default function ProjectCard({ item }) {
       <div>
         <div className="flex gap-2">
           <div className="flex flex-col gap-3">
-            <h2 className="font-medium mb-2 text-2xl text-white ">
+            <h2 className="font-medium mb-2 text-xl text-white ">
               {item.name}
             </h2>
             <p className="text-gray-400 mb-2">{item.description}</p>

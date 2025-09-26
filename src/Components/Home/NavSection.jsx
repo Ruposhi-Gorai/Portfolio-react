@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 md:px-1 flex justify-between items-center h-16">
         {/* Logo */}
         <Link to="home" smooth={true} duration={600} offset={-60}>
-        <h1 className="text-[22px] md:text-2xl font-semibold text-gray-300 cursor-pointer hover:text-white transition-all duration-100 ">
+        <h1 className="text-[22px] md:text-2xl font-semibold text-gray-100 cursor-pointer hover:text-white transition-all duration-100 ">
          <span className="text-emerald-500">//</span>Ruposhi.
         </h1>
         </Link>

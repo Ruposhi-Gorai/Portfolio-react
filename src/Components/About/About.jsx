@@ -28,19 +28,19 @@ export default function () {
 
   return (
     <>
-      <div id="about" className="md:mt-15 mb-10">
+      <div id="about" className="md:mt-10 mb-10">
         {/* <h2 className="text-3xl   text-teal-500 font-light p-6 tracking-[8px] text-center sm:text-4xl">
           About Me
         </h2> */}
         <motion.h2
           initial="hidden"
           animate="visible"
-          className="text-3xl md:text-7xl  font-sans  text-gray-300 font-medium p-6 tracking-[8px] text-center sm:text-4xl"
+          className="text-3xl md:text-5xl  font-sans  text-gray-300 font-medium p-6 tracking-[4px] text-center sm:text-4xl"
         >
           About Me
         </motion.h2>
-        <div className="flex flex-col  md:flex-row gap-8 pt-5 justify-center items-center md:my-20 px-4 md:px-10 w-full ">
-          <div className="w-full lg:w-[40%] px-5 lg:px-10 lg:mx-10 flex items-center justify-center">
+        <div className="flex flex-col  md:flex-row gap-5 pt-5 justify-center items-center md:my-20 px-4 md:px-10 w-full ">
+          <div className="w-full md:basis-[40%] px-5 lg:px-10 lg:mx-10 flex items-center justify-center">
             <motion.div
               variants={itemVariants}
               initial="hidden"
