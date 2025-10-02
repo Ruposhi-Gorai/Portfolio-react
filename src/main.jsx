@@ -22,7 +22,5 @@ createRoot(document.getElementById("root")).render(
       <Projects />
       <Contact />
       <Footer />
-    
-
   </>
 );

@@ -28,7 +28,7 @@ export default function () {
 
   return (
     <>
-      <div id="about" className="md:mt-10 mb-10">
+      <div id="about" className=" mb-10">
         <motion.h2
           initial="hidden"
           animate="visible"

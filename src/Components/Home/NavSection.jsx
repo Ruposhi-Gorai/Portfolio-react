@@ -8,7 +8,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const menuItems = [
-    { name: "Home", to: "home" },
+    { name: "Home", to: "/" },
     { name: "About", to: "about" },
     { name: "Skills", to: "skills" },
     { name: "Projects", to: "projects" },

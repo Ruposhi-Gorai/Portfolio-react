@@ -56,12 +56,12 @@ export default function Intro() {
 
   return (
     <>
-
+<div className="flex items-center h-screen justify-center mt-[-50px]">
     <motion.div
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="font-pop px-10 py-2 mt-20 md:mt-50 h-screen text-center flex flex-col flex-wrap items-center md:text-start"
+      className="font-pop px-10 py-2  text-center flex flex-col flex-wrap items-center "
     >
       <motion.h3
         variants={itemVariants}
@@ -95,7 +95,7 @@ export default function Intro() {
         variants={itemVariants}
         className="flex flex-col md:flex-row px-2 sm:gap-5 gap-5 w-full  items-center md:items-end justify-center max-w-xl "
       >
-        <button className=" text-gray-200 w-40 md:w-auto font-pop  py-2 md:py-2  px-3 md:px:6 rounded-full cursor-pointer hover:scale-105 transition-transform  border-cyan-400 shadow-[0_4px_12px_rgba(6,182,212,0.5)]">
+        <button className=" text-gray-200  py-2 md:py-3 px-4  rounded-full cursor-pointer hover:scale-105 transition-transform  border-cyan-400 shadow-[0_4px_12px_rgba(6,182,212,0.5)] text-[14px] hover:shadow-[0_4px_20px_rgba(6,182,212,0.7)]">
           <Link
             to="projects" // scrolls to section with id="projects"
             smooth={true}
@@ -119,6 +119,8 @@ export default function Intro() {
       </div>
        
     </motion.div>
+</div>
+
     </>
     
   );
