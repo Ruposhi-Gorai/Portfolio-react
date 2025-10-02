@@ -16,7 +16,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="  fixed top-0 left-0 w-full backdrop-blur-md  shadow-md z-5 border-b border-gray-900">
+    <nav className="  sticky top-0 left-0 w-full backdrop-blur-md  shadow-md z-5 border-b border-gray-900">
       <div className="max-w-7xl mx-auto px-4 md:px-1 flex justify-between items-center h-16">
         {/* Logo */}
         <Link to="home" smooth={true} duration={600} offset={-60}>
@@ -26,7 +26,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex md:space-x-8 text-lg">
+        <ul className="hidden md:flex md:space-x-8 text-[16px]">
           {menuItems.map((item) => (
             <li key={item.to}>
               <Link

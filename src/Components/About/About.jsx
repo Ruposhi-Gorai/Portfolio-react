@@ -29,9 +29,6 @@ export default function () {
   return (
     <>
       <div id="about" className="md:mt-10 mb-10">
-        {/* <h2 className="text-3xl   text-teal-500 font-light p-6 tracking-[8px] text-center sm:text-4xl">
-          About Me
-        </h2> */}
         <motion.h2
           initial="hidden"
           animate="visible"
@@ -42,10 +39,10 @@ export default function () {
         <div className="flex flex-col  md:flex-row gap-5 pt-5 justify-center items-center md:my-20 px-4 md:px-10 w-full ">
           <div className="w-full md:basis-[40%] px-5 lg:px-10 lg:mx-10 flex items-center justify-center">
             <motion.div
-              variants={itemVariants}
-              initial="hidden"
-              whileInView="visible" // triggers when scrolled into view
-              viewport={{ once: true, amount: 0.5 }} // animate only once, 30% visible
+              initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
               className="overflow-hidden hover:scale-105 transition-all duration-300 rounded-2xl "
             >
               <img src={image} alt="" className="w-full block" />
@@ -59,7 +56,12 @@ export default function () {
                 className="text-cyan-700  "
               />{" "}
             </h1>
-            <div className="sm:w-[100%] xl:w-[90%] mt-6 mx-3 text-gray-400  px-4 md:px-6 text-[16px] xl:text-[18px] font-light bg-[#151616a2] py-10 md:my-10 rounded-2xl shadow-[0_0_5px_0px_rgba(0,255,255,0.1)] group transition duration-300 hover:scale-102 hover:shadow-[0_10px_30px_0_rgba(6,182,212,0.5)]">
+            <motion.div 
+               initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true }}
+            className="sm:w-[100%] xl:w-[90%] mt-6 mx-3 text-gray-400  px-4 md:px-6 text-[16px] xl:text-[18px] font-light bg-[#151616a2] py-10 md:my-10 rounded-2xl shadow-[0_0_5px_0px_rgba(0,255,255,0.1)] group transition duration-300 hover:scale-102 hover:shadow-[0_10px_30px_0_rgba(6,182,212,0.5)]">
               <p>
                 Hi, I’m Ruposhi, a curious developer who loves exploring new
                 tech and building something impactful. Beyond coding, I love
@@ -84,7 +86,7 @@ export default function () {
                   <li>Quick learner and team player</li>
                 </ul>
               </div>
-            </div>
+            </motion.div>
             <div>
               <Social />
             </div>

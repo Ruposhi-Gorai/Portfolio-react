@@ -13,7 +13,8 @@ import NavSection from "./Components/Home/NavSection";
 createRoot(document.getElementById("root")).render(
   <>
 
-
+    <div className="h-screen z-[-2] absolute top-0 w-full flex justify-center  bg-gradient-to-b from-gray-800 to-[#0a0a0a]">
+    </div>
       <NavSection />
       <HomePage />
       <About />
