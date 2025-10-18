@@ -118,7 +118,7 @@ export default function Projects() {
       <div id="projects" className="mb-20 py-5 md:px-0">
         <ToastContainer theme="colored" />
         <div>
-            <h1 className="md:text-5xl  font-sans font-medium text-4xl text-gray-300 tracking-[4px] text-center  p-10 md:p-3 md:my-5 ">
+            <h1 className="md:text-5xl  font-sans font-bold text-4xl text-gray-300 tracking-[4px] text-center  p-10 md:p-3 md:my-5 ">
           Latest Projects
         </h1>
         </div>

@@ -77,7 +77,7 @@ export default function Skills() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-                   <h1 className="md:text-5xl  font-sans font-medium text-4xl text-gray-300 tracking-[4px] text-center  pb-10   ">
+                   <h1 className="md:text-5xl  font-sans font-bold text-4xl text-gray-300 tracking-[4px] text-center  pb-10   ">
           My Skills
         </h1>
             <div className="grid md:grid-cols-2 gap-8">

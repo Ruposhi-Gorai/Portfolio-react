@@ -56,70 +56,25 @@ export default function Intro() {
 
   return (
     <>
-<div className="flex items-center h-screen justify-center mt-[-50px]">
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className="font-pop px-10 py-2  text-center flex flex-col flex-wrap items-center "
-    >
-      <motion.h3
-        variants={itemVariants}
-        className="text-[36px] md:text-7xl px-2 md:py:2 font-medium   text-emerald-500"
-         style={{fontFamily: '"Dancing Script", cursive'}}
-
-      >
-        Hi I'm <span className="text-white">Ruposhi</span>
-      </motion.h3>
-
-      {/* <motion.div
-        variants={itemVariants}
-        className="text-[46px] md:text-8xl text-gray-200 leading-15 sm:leading-20 font-medium  px-2 md:py-3"
-        style={{fontFamily: '"Dancing Script", cursive'}}
-      >
-        Ruposhi Gorai
-      </motion.div> */}
-
-      <motion.div
-        variants={itemVariant}
-        className="text-lg font-light md:text-[20px] text-gray-300 my-3 md:my-5 px-2 py-2"
-      >
-        <ReactTyped
-          strings={["A Full Stack Developer, based in India"]}
-          typeSpeed={50}
-          startDelay={500}
-        />
-      </motion.div>
-
-      <motion.div
-        variants={itemVariants}
-        className="flex flex-col md:flex-row px-2 sm:gap-5 gap-5 w-full  items-center md:items-end justify-center max-w-xl "
-      >
-        <button className=" text-gray-200  py-2 md:py-3 px-4  rounded-full cursor-pointer hover:scale-105 transition-transform  border-cyan-400 shadow-[0_4px_12px_rgba(6,182,212,0.5)] text-[14px] hover:shadow-[0_4px_20px_rgba(6,182,212,0.7)]">
-          <Link
-            to="projects" // scrolls to section with id="projects"
-            smooth={true}
-            duration={600}
-            offset={-64} // adjust for navbar height
-            className="cursor-pointer"
-          >
-            View My Works
-          </Link>
-        </button>
-        {/* <button
-          className="bg-gradient-to-r  w-40 md:w-auto  hover:shadow-[0_0_25px_5px_rgba(6, 182, 212, 0.5)] text-cyan-300 py-2 md:py-2  px-2 md:px-6 rounded-full cursor-pointer hover:scale-105 transition-transform"
-          onClick={handleClick}
-        >
-          Book a call
-        </button> */}
-        <ToastContainer />
-      </motion.div>
-      <div className="sm:ms-[-18px] md:py-5">
-      <Social />
-      </div>
-       
-    </motion.div>
-</div>
+ <section id="/" class="relative bg-black overflow-hidden md:h-screen flex md:pt-10 bg-grid">
+             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-gray-900/60 to-transparent"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 text-center relative z-[5]">
+                <div class="flex flex-col items-center">
+                    <div class="h-32 w-32 rounded-full object-cover ring-4 ring-green-500 bg-green-600 shadow-lg text-6xl flex items-center text-white justify-center font-semibold mb-6">RG</div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
+                        <span class="block">Hi, I'm Ruposhi.</span>
+                        <span class="block text-cyan-400">I build things for the web.</span>
+                    </h1>
+                    <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-300">
+                        I'm a passionate full-stack developer based in India, specializing in creating intuitive, high-performance web applications. Welcome to my digital page.
+                    </p>
+                    <div class="mt-8 flex justify-center gap-4 flex-wrap">
+                        <Link to="projects" class="inline-block bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105 shadow-lg">View My Work</Link>
+                        <a href="resume.pdf" target="_blank" class="inline-block bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition-transform transform hover:scale-105 shadow-lg">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </>
     

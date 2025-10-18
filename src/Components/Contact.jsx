@@ -73,7 +73,7 @@ export default function Contact() {
         </div>
 
         <div className="px-10 md:w-[480px] py-15 ">
-          <h2 className="text-3xl  text-gray-300 font-medium p-5 tracking-[4px] text-center sm:text-4xl">
+          <h2 className="text-3xl  text-gray-300 font-bold p-5 tracking-[4px] text-center sm:text-4xl">
             Contact Me
           </h2>
 

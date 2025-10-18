@@ -32,7 +32,7 @@ export default function () {
         <motion.h2
           initial="hidden"
           animate="visible"
-          className="text-3xl md:text-5xl  font-sans  text-gray-300 font-medium p-6 tracking-[4px] text-center sm:text-4xl"
+          className="text-3xl md:text-5xl  font-sans  text-gray-300 font-bold p-6 tracking-[4px] text-center sm:text-4xl"
         >
           About Me
         </motion.h2>
