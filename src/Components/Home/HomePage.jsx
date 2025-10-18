@@ -63,14 +63,14 @@ export default function Intro() {
                     <div class="h-32 w-32 rounded-full object-cover ring-4 ring-green-500 bg-green-600 shadow-lg text-6xl flex items-center text-white justify-center font-semibold mb-6">RG</div>
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
                         <span class="block">Hi, I'm Ruposhi.</span>
-                        <span class="block text-cyan-400">I build things for the web.</span>
+                        <span class="block text-indigo-400">I build things for the web.</span>
                     </h1>
                     <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-300">
                         I'm a passionate full-stack developer based in India, specializing in creating intuitive, high-performance web applications. Welcome to my digital page.
                     </p>
                     <div class="mt-8 flex justify-center gap-4 flex-wrap">
-                        <Link to="projects" class="inline-block bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105 shadow-lg">View My Work</Link>
-                        <a href="resume.pdf" target="_blank" class="inline-block bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition-transform transform hover:scale-105 shadow-lg">Download Resume</a>
+                        <Link to="projects" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105 shadow-lg">View My Work</Link>
+                        <a href="resume.pdf" download={"download"} target="_blank" class="inline-block bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition-transform transform hover:scale-105 shadow-lg">Download Resume</a>
                     </div>
                 </div>
             </div>
