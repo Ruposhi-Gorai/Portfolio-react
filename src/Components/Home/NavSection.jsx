@@ -35,7 +35,7 @@ export default function Navbar() {
                 duration={600}
                 spy={true}
                 offset={-60} // to consider navbar height
-                className="cursor-pointer hover:text-teal-400 hover:border-b"
+                className="cursor-pointer font-bold hover:text-indigo-400 hover:border-b"
               >
                 {item.name}
               </Link>
