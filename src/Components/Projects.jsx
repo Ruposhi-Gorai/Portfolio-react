@@ -125,7 +125,7 @@ export default function Projects() {
         <div className="w-full space-y-6 md:flex flex-wrap items-center gap-6 md:mt-10 px-8 md:py-5 md:px-15 md:justify-center md:space-y-3">
           {project.slice(0, visibleCount+3).map((v, i) => (
             <motion.div
-              className="border-cyan-700 border-[0.2px] rounded-2xl shadow-lg sm:w-[40%] xl:w-[25%] md:h-[260px] p-5 md:p-8 transition-all hover:scale-[1.05] hover:shadow-[0_2px_30px_0_rgba(6,182,212,0.5)] drop-shadow-2xl duration-300"
+              className="border-indigo-500 border-[0.2px] rounded-2xl shadow-lg sm:w-[40%] xl:w-[25%] md:h-[260px] p-5 md:p-8 transition-all hover:bg-indigo-500 [0_2px_30px_0_rgba(6,182,212,0.5)] drop-shadow-2xl duration-300"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -143,7 +143,7 @@ export default function Projects() {
           <div className="flex justify-center mt-6">
             <button
               onClick={handleViewMore}
-              className="px-6 py-2 border-1 text-white rounded border-cyan-500 hover:text-gray-300 cursor-pointer shadow-md  transition"
+              className="px-6 py-2 border-1 text-white rounded border-indigo-500 hover:text-gray-300 cursor-pointer shadow-md  transition"
             >
               View More
             </button>

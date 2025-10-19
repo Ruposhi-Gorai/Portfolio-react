@@ -61,11 +61,11 @@ export default function Contact() {
             className=" md:text-[18px]  items-center text-gray-400  mt-1 ps-2 bg-[#43485734] rounded-lg shadow-lg p-6 mb-2"
           >
             <div  className="flex gap-2 items-center p-3">
-              <CiMail className="text-cyan-400 "/>{" "}
+              <CiMail className="text-indigo-400 "/>{" "}
               <span className="text-extralight">ruposhigorai09@gmail.com</span>
             </div>
             <div className="flex gap-2 items-center p-3">
-              <CiLocationOn  className="text-cyan-400 "/>
+              <CiLocationOn  className="text-indigo-400 "/>
               <span className="text-extralight">Jamshedpur, JH INDIA</span>{" "}
             </div>
           </motion.div>
@@ -94,7 +94,7 @@ export default function Contact() {
                     value= {inputData.name}
                     onChange={(event) => setInputData(event.target.value)}
                     autocomplete="location"
-                    className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1 shadow-sm ring-1 ring-inset ring-cyan-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1 shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -112,7 +112,7 @@ export default function Contact() {
                     value= {inputData.location}
                     onChange={(event) => setInputData(event.target.value)}
                     autocomplete="location"
-                    className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1 shadow-sm ring-1 ring-inset ring-cyan-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1 shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -131,7 +131,7 @@ export default function Contact() {
                     value= {inputData.email}
                     onChange={(event) => setInputData(event.target.value)}
                     autocomplete="email"
-                    className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1  shadow-sm ring-1 ring-inset ring-cyan-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1  shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -166,7 +166,7 @@ export default function Contact() {
                     rows="4"
                     value= {inputData.message}
                     onChange={(event) => setInputData(event.target.value)}
-                    className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1  shadow-sm ring-1 ring-inset ring-cyan-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1  shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   ></textarea>
                 </div>
               </div>

@@ -69,8 +69,8 @@ export default function Skills() {
           </form>
         </div>
       </div> */}
-        <section id="skills" className="min-h-screen flex items-start py-20 ">
-        <div className="max-w-6xl mx-auto px-6 w-full">
+        <section id="skills" className=" flex items-start justify-center py-20 ">
+        <div className="w-full  mx-auto px-6 ">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ export default function Skills() {
                    <h1 className="md:text-5xl  font-sans font-bold text-4xl text-gray-300 tracking-[4px] text-center  pb-10   ">
           My Skills
         </h1>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-4 my-10  mx-auto gap-6 w-[80%] ">
               {[
                 { icon: <FaCode />, title: 'Frontend Development', skills: ['Html', 'CSS', 'Javascript','React.js', 'Next.js','Bootstrap', 'Tailwind CSS'] },
                 { icon: <FaDatabase />, title: 'Backend Development', skills: ['Node.js','Express.js', 'MongoDB', 'noSql'] },
@@ -94,13 +94,13 @@ export default function Skills() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
-                  className=" p-8 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/50 transition-all"
+                  className=" p-8 rounded-3xl border flex flex-col group items-center text-center border-indigo-500/50 hover:bg-indigo-500/60 transition-all"
                 >
-                  <div className="text-4xl text-gray-200 mb-4">{category.icon}</div>
-                  <h3 className="text-2xl font-bold mb-4">{category.title}</h3>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="text-4xl text-gray-100 group-hover:rotate-360 transition-all mb-4">{category.icon}</div>
+                  <h3 className="text-2xl text-gray-100 font-bold mb-5">{category.title}</h3>
+                  <div className="flex flex-wrap justify-center gap-3">
                     {category.skills.map((skill, i) => (
-                      <span key={i} className="px-3 py-1 bg-cyan-500/20 rounded-full text-sm text-white">
+                      <span key={i} className="px-3 py-1 bg-indigo-500/20 rounded-full text-sm text-white">
                         {skill}
                       </span>
                     ))}

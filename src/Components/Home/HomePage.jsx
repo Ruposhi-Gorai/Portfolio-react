@@ -74,7 +74,7 @@ export default function Intro() {
                     </div>
                 </div>
             </div>
-        </section>
+ </section>
 
     </>
     
