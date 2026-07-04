@@ -11,7 +11,7 @@ export default function Social() {
           <a href="https://github.com/Ruposhi-Gorai" target="_blank"><FaGithub /></a>
         </div>
         <div className="  rounded-full p-2  md:p-3  mt-5 shadow-[0_0_10px_2px_rgba(6, 182, 212, 0.5)] hover:shadow-[0_0px_20px_5px_rgba(6,182,212,0.5)] transition-all duration-300">
-          <a href="https://www.linkedin.com/in/ruposhigorai27062002/" target="_blank"><FaLinkedinIn /></a>
+          <a href="https://linkedin.com/in/ruposhig27" target="_blank"><FaLinkedinIn /></a>
         </div>
         <div className=" rounded-full p-2 md:p-3  mt-5 shadow-[0_0_10px_2px_rgba(6, 182, 212, 0.5)] 
         hover:shadow-[0_0px_20px_5px_rgba(6,182,212,0.5)] transition-all duration-300">
