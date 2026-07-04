@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import { Link } from "react-scroll";
 import Social from "../social/Social";
-import profilePic from "../../assets/images/pic.jpeg";
+import profilePic from "../../assets/images/pic2.jpeg";
 
 const isMobile = () => window.innerWidth <= 768;
 
@@ -57,30 +57,113 @@ export default function Intro() {
 
   return (
     <>
-      <section id="/" class="relative bg-black overflow-hidden md:h-screen flex md:pt-10 bg-grid">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-gray-900/60 to-transparent"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 text-center relative z-[5]">
-          <div class="flex flex-col items-center">
-<div className="h-32 w-32 rounded-full object-cover ring-1 ring-green-500 bg-green-600 shadow-lg text-6xl flex items-center text-white justify-center font-semibold mb-6">
-  <img
-    src={profilePic}
-    alt="Profile Image"
-    className="rounded-full h-full w-full object-cover"
-  />
-</div>            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
-              <span class="block">Hi, I'm Ruposhi.</span>
-              <span class="block text-indigo-400">I build things for the web.</span>
-            </h1>
-            <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-300">
-              I'm a passionate full-stack developer based in India, specializing in creating intuitive, high-performance web applications. Welcome to my digital page.
-            </p>
-            <div class="mt-8 flex justify-center gap-4 flex-wrap">
-              <Link to="projects" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105 shadow-lg">View My Work</Link>
-              <a href="resume.pdf" download={"download"} target="_blank" class="inline-block bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition-transform transform hover:scale-105 shadow-lg">Download Resume</a>
-            </div>
-          </div>
+<section
+  id="/"
+  className="relative min-h-screen bg-black overflow-hidden flex items-center bg-grid z-2"
+>
+  <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0f] to-black"></div>
+
+  <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+
+    <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+      {/* LEFT */}
+
+      <motion.div
+        initial={{ opacity: 0, x: -70 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: .7 }}
+      >
+
+        <span className="inline-block mb-6 border border-indigo-500/30 bg-indigo-500/10 px-5 py-2 rounded-full text-indigo-400">
+          &lt;/&gt; Full Stack Developer
+        </span>
+
+        <h1 className="text-6xl lg:text-7xl font-black text-white leading-tight">
+          Hi, I'm
+          <br />
+
+          <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+            Ruposhi.
+          </span>
+        </h1>
+
+        <h2 className="text-4xl font-bold text-gray-300 mt-4">
+          I build
+          <span className="text-indigo-400"> things </span>
+          for the web.
+        </h2>
+
+        <p className="text-gray-400 text-lg leading-8 mt-8 max-w-xl">
+          Passionate Full Stack Developer who enjoys creating beautiful,
+          responsive and scalable web applications with React, Node,
+          MongoDB and modern web technologies.
+        </p>
+
+        <div className="flex gap-5 mt-10">
+
+          <Link
+            to="projects"
+            className="bg-indigo-600 hover:bg-indigo-500 px-8 py-4 rounded-xl font-semibold transition"
+          >
+            View My Work
+          </Link>
+
+          <a
+            href="resume.pdf"
+            target="_blank"
+            className="border border-gray-700 hover:border-indigo-400 px-8 py-4 rounded-xl transition"
+          >
+            Resume
+          </a>
+
         </div>
-      </section>
+
+        <div className="mt-12">
+          <Social />
+        </div>
+
+      </motion.div>
+
+      {/* RIGHT */}
+
+      <motion.div
+        initial={{ opacity: 0, x: 70 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: .7 }}
+        className="flex justify-center"
+      >
+        <div className="relative">
+          <div className="absolute -top-40 left-20 w-[500px] h-[500px] rounded-full bg-purple-600/20 blur-[150px] shimmer"></div>
+
+<div className="absolute bottom-0 right-0 w-[450px] h-[450px] rounded-full bg-indigo-500/20 blur-[150px] shimmer"></div>
+
+
+          {/* Glow */}
+
+          <div className="absolute inset-0 rounded-[40px] bg-indigo-600 blur-3xl opacity-20"></div>
+<div className="absolute -top-10 -right-10 w-72 h-72 bg-purple-600 rounded-full blur-[120px] opacity-20"></div>
+
+<div className="absolute bottom-0 -left-10 w-60 h-60 bg-indigo-500 rounded-full blur-[100px] opacity-20"></div>
+          <div className="relative rounded-[35px] border border-indigo-500/30 overflow-hidden shadow-2xl">
+
+            <img
+              src={profilePic}
+              alt=""
+              className="w-[420px] h-[550px] object-cover hover:scale-105 transition duration-500"
+            />
+
+          </div>
+
+        </div>
+
+      </motion.div>
+
+    </div>
+
+  </div>
+
+</section>
 
     </>
 
