@@ -6,7 +6,7 @@ export default function ProjectCard({ item }) {
   return (
     <>
       <div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 group">
           <div className="flex flex-col gap-3">
             <h2 className="font-medium mb-2 text-xl text-white ">
               {item.name}
@@ -26,8 +26,7 @@ export default function ProjectCard({ item }) {
               href={item.homepage}
               target="_blank"
               rel="noopener noreferrer"
-              className="md:w-[35%] text-center text-[16px] px-2 py-2 rounded-lg bg-indigo-800 hover:bg-indigo-900 text-white font-medium transition duration-200"
-            >
+              className="md:w-[35%] text-center text-[16px] px-2 py-2 rounded-lg hover:bg-indigo-600 bg-indigo-500  text-white font-medium transition duration-200"            >
               Demo
             </a>
           )}
@@ -35,7 +34,7 @@ export default function ProjectCard({ item }) {
             href={item.html_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="md:w-[40%] text-start px-2 text-[16px] py-2 rounded-lg  -500 text-gray-100  font-medium transition duration-200"
+            className="md:w-[40%] text-start px-2 text-[16px] py-2 rounded-lg  -500 text-gray-100 hover:text-green-500 font-medium transition duration-200"
           >
             Code &lt;/&gt;
           </a>

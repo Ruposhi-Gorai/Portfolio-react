@@ -26,7 +26,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex md:space-x-8 text-[16px]">
+        <ul className="hidden md:flex md:space-x-8 text-[14px]">
           {menuItems.map((item) => (
             <li key={item.to}>
               <Link
@@ -35,10 +35,29 @@ export default function Navbar() {
                 duration={600}
                 spy={true}
                 offset={-60} // to consider navbar height
-                className="cursor-pointer font-bold hover:text-indigo-400 hover:border-b"
+                className="relative inline-block
+      cursor-pointer
+      font-medium
+      text-gray-300
+      transition-all
+      hover:text-indigo-400
+
+      after:absolute
+      after:left-0
+      after:-bottom-1
+      after:h-[2px]
+      after:w-full
+      after:origin-left
+      after:scale-x-0
+      after:bg-indigo-400
+      after:transition-transform
+      after:duration-300
+      hover:after:scale-x-100"
               >
                 {item.name}
+                
               </Link>
+              
             </li>
           ))}
         </ul>

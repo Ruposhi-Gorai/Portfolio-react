@@ -122,10 +122,10 @@ export default function Projects() {
           Latest Projects
         </h1>
         </div>
-        <div className="w-full space-y-6 md:flex flex-wrap items-center gap-6 md:mt-10 px-8 md:py-5 md:px-15 md:justify-center md:space-y-3">
+        <div className="w-full space-y-6 md:flex flex-wrap items-center gap-6 md:mt-10 px-8 md:py-5 md:px-15 md:justify-center md:space-y-3 group">
           {project.slice(0, visibleCount+3).map((v, i) => (
             <motion.div
-              className="border-indigo-500 border-[0.2px] rounded-2xl shadow-lg sm:w-[40%] xl:w-[25%] md:h-[260px] p-5 md:p-8 transition-all hover:bg-indigo-500 [0_2px_30px_0_rgba(6,182,212,0.5)] drop-shadow-2xl duration-300"
+              className="border-indigo-900 border-[0.2px] rounded-2xl shadow-lg sm:w-[40%] xl:w-[25%] md:h-[260px] p-5 md:p-8 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-violet-500/50 drop-shadow-2xl duration-300"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"

@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { Link } from "react-scroll";
 import Social from "../social/Social";
 import profilePic from "../../assets/images/pic2.jpeg";
+import resumePdf from "../../assets/RuposhiGorai.pdf"; // adjust ../ if needed
 
 const isMobile = () => window.innerWidth <= 768;
 
@@ -75,8 +76,8 @@ export default function Intro() {
         transition={{ duration: .7 }}
       >
 
-        <span className="inline-block mb-6 border border-indigo-500/30 bg-indigo-500/10 px-5 py-2 rounded-full text-indigo-400">
-          &lt;/&gt; Full Stack Developer
+        <span className="inline-block mb-6 border border-green-500/30 bg-indigo-500/10 px-5 py-2 rounded-full text-green-600">
+           Full Stack Developer
         </span>
 
         <h1 className="text-6xl lg:text-7xl font-black text-white leading-tight">
@@ -95,22 +96,22 @@ export default function Intro() {
         </h2>
 
         <p className="text-gray-400 text-lg leading-8 mt-8 max-w-xl">
-          Passionate Full Stack Developer who enjoys creating beautiful,
+          Passionate Full Stack Developer with a strong foundation in web development, dedicated to creating
           responsive and scalable web applications with React, Node,
           MongoDB and modern web technologies.
         </p>
 
-        <div className="flex gap-5 mt-10">
+        <div className="flex gap-5 mt-10 text-white">
 
           <Link
             to="projects"
-            className="bg-indigo-600 hover:bg-indigo-500 px-8 py-4 rounded-xl font-semibold transition"
+            className="bg-indigo-600 hover:bg-indigo-500 hover:cursor-pointer px-8 py-4 rounded-xl font-semibold transition"
           >
             View My Work
           </Link>
 
           <a
-            href="resume.pdf"
+            href={resumePdf}
             target="_blank"
             className="border border-gray-700 hover:border-indigo-400 px-8 py-4 rounded-xl transition"
           >
@@ -145,7 +146,7 @@ export default function Intro() {
 <div className="absolute -top-10 -right-10 w-72 h-72 bg-purple-600 rounded-full blur-[120px] opacity-20"></div>
 
 <div className="absolute bottom-0 -left-10 w-60 h-60 bg-indigo-500 rounded-full blur-[100px] opacity-20"></div>
-          <div className="relative rounded-[35px] border border-indigo-500/30 overflow-hidden shadow-2xl">
+          <div className="relative rounded-[35px] border border-indigo-500/30 overflow-hidden hover:cursor-pointer shadow-2xl">
 
             <img
               src={profilePic}

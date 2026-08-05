@@ -9,18 +9,21 @@ import Contact from "./Components/Contact";
 import Projects from "./Components/Projects";
 import Footer from "./Components/Footer";
 import NavSection from "./Components/Home/NavSection";
+import Torch from "./Components/Torch";
 
 createRoot(document.getElementById("root")).render(
   <>
-
-    <div className="h-screen z-[-2] absolute top-0 w-full flex justify-center  bg-gradient-to-b from-gray-800 to-[#0a0a0a]">
+    <Torch />
+    <div className="h-screen z-[-2] absolute top-0 w-full flex justify-center bg-gradient-to-b from-gray-800 to-[#0a0a0a]">
     </div>
       <NavSection />
       <HomePage />
       <About />
+
       <Skills />
       <Projects />
       <Contact />
       <Footer />
+      
   </>
 );

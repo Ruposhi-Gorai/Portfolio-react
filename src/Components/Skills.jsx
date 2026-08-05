@@ -94,7 +94,7 @@ export default function Skills() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
-                  className=" p-8 rounded-3xl border flex flex-col group items-center text-center border-indigo-500/50 hover:bg-indigo-500/60 transition-all"
+                  className=" p-8 rounded-3xl border shadow-lg  flex flex-col group items-center text-center border-indigo-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-violet-500/50 drop-shadow-2xl "
                 >
                   <div className="text-4xl text-gray-100 group-hover:rotate-360 transition-all mb-4">{category.icon}</div>
                   <h3 className="text-2xl text-gray-100 font-bold mb-5">{category.title}</h3>
