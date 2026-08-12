@@ -11,9 +11,9 @@ export default function Contact() {
   const [inputData, setInputData] = useState('')
   const formData = JSON.parse(localStorage.getItem('userData')) ?? []
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
-      const data = {
+    const data = {
       name: e.target.name.value,
       email: e.target.email.value,
       location: e.target.location.value,
@@ -27,7 +27,7 @@ export default function Contact() {
     e.target.reset();
 
     toast.success('thanks for contacting me!')
-    
+
 
   }
 
@@ -61,16 +61,16 @@ export default function Contact() {
             viewport={{ once: true }}
             className=" md:text-[18px]  items-center text-gray-400  mt-1 ps-2 bg-[#43485734] rounded-lg shadow-lg p-6 mb-2"
           >
-            <div  className="flex gap-2 items-center p-3">
-              <CiMail className="text-indigo-400 "/>{" "}
-              <span className="text-extralight">ruposhigorai09@gmail.com</span>
+            <div className="flex gap-2 items-center p-3">
+              <CiMail className="text-indigo-400 " />{" "}
+              <span className="text-extralight">ruposhigorai27@gmail.com</span>
             </div>
             <div className="flex gap-2 items-center p-3">
-              <CiLocationOn  className="text-indigo-400 "/>
-              <span className="text-extralight">Jamshedpur, JH INDIA</span>{" "}
+              <CiLocationOn className="text-indigo-400 " />
+              <span className="text-extralight">Bengaluru, Karnataka, IN</span>{" "}
             </div>
           </motion.div>
-         
+
         </div>
 
         <div className="px-10 md:w-[480px] py-15 ">
@@ -79,7 +79,7 @@ export default function Contact() {
           </h2>
 
           <form onSubmit={handleSubmit}
-          className="mx-auto w-full max-w-[400px] md:max-w-[480px] sm:mt-20 lg:mt-8  ">
+            className="mx-auto w-full max-w-[400px] md:max-w-[480px] sm:mt-20 lg:mt-8  ">
             <div className="grid grid-cols-1 gap-x-6 gap-y-1 w-full sm:grid-cols-2">
               <div className="sm:col-span-2">
                 <label
@@ -92,7 +92,7 @@ export default function Contact() {
                   <input
                     type="text"
                     name="name"
-                    value= {inputData.name}
+                    value={inputData.name}
                     onChange={(event) => setInputData(event.target.value)}
                     autocomplete="location"
                     className="block w-full rounded-md border-0 px-3.5 md:py-2 focus:outline-none focus:ring-0  py-1 shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -110,7 +110,7 @@ export default function Contact() {
                   <input
                     type="text"
                     name="location"
-                    value= {inputData.location}
+                    value={inputData.location}
                     onChange={(event) => setInputData(event.target.value)}
                     autocomplete="location"
                     className="block w-full rounded-md border-0 px-3.5 md:py-2 focus:outline-none focus:ring-0 py-1 shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -129,7 +129,7 @@ export default function Contact() {
                     type="email"
                     name="email"
                     id="email"
-                    value= {inputData.email}
+                    value={inputData.email}
                     onChange={(event) => setInputData(event.target.value)}
                     autocomplete="email"
                     className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1 focus:outline-none focus:ring-0 shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -165,7 +165,7 @@ export default function Contact() {
                     name="message"
                     id="message"
                     rows="4"
-                    value= {inputData.message}
+                    value={inputData.message}
                     onChange={(event) => setInputData(event.target.value)}
                     className="block w-full rounded-md border-0 px-3.5 md:py-2 focus:outline-none focus:ring-0 py-1  shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   ></textarea>
@@ -175,7 +175,7 @@ export default function Contact() {
             <div className="mt-10">
               <button
                 type="submit"
-className="flex items-center justify-center group gap-2 w-full rounded-md bg-indigo-700 px-3.5 py-2 cursor-pointer text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"              >
+                className="flex items-center justify-center group gap-2 w-full rounded-md bg-indigo-700 px-3.5 py-2 cursor-pointer text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"              >
                 <span>Let's talk</span>
                 <FaLocationArrow className="text-white transition-transform duration-300 group-hover:translate-x-1" />
               </button>

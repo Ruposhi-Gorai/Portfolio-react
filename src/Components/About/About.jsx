@@ -28,7 +28,7 @@ export default function () {
 
   return (
     <>
-      <div id="about" className=" mb-10 ">
+      <div id="about" className="my-10 ">
         <motion.h2
           initial="hidden"
           animate="visible"
@@ -61,7 +61,7 @@ export default function () {
                 whileInView={{ opacity: 1}}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
-            className="sm:w-[100%] xl:w-[80%] mx-auto mt-6 flex justify-center text-gray-400  px-4 md:px-6 text-[16px] xl:text-[18px] shadow-2xl font-light py-10 md:my-10 rounded-full   group transition duration-300 border-b-1  border-indigo-500 ">
+            className="sm:w-[100%] xl:w-[80%] mx-auto md:mt-6 flex justify-center text-gray-400  px-4 md:px-6 text-[16px] xl:text-[18px] lg:shadow-2xl font-light lg:py-10 md:my-10 rounded-full   group transition duration-300 lg:border-b-1  lg:border-indigo-500 ">
               <p className="lg:w-[900px] text-center px-5">
                I am a passionate Full Stack Developer driven by the challenge of turning complex ideas into elegant, high-performance web applications. My expertise lies in building dynamic, user-centric interfaces and robust backend systems. I am dedicated to the craft of writing clean, scalable, and efficient code, ensuring that every project is not only functional but also intuitive and accessible. I thrive in collaborative environments, bridging the gap between design and technology to deliver impactful digital experiences that solve real-world problems and exceed user expectations.
               </p>
