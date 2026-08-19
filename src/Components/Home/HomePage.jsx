@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import { Link } from "react-scroll";
 import Social from "../social/Social";
-import profilePic from "../../assets/images/pic2.jpeg";
+import profilePic from "../../assets/images/pic6.png";
+import botPic from "../../assets/images/pic4.png";
 import resumePdf from "../../assets/RuposhiGorai.pdf"; // adjust ../ if needed
 
 const isMobile = () => window.innerWidth <= 768;
@@ -84,18 +85,18 @@ export default function Intro() {
           Hi, I'm
           <br />
 
-          <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r doto from-indigo-400 to-purple-500 bg-clip-text text-transparent">
             Ruposhi.
           </span>
         </h1>
 
-        <h2 className="text-4xl font-bold text-gray-300 mt-4">
+        <h2 className="text-3xl font-bold text-gray-300 mt-4">
           I build
           <span className="text-indigo-400"> things </span>
           for the web.
         </h2>
 
-        <p className="text-gray-400 text-lg leading-8 mt-8 max-w-xl">
+        <p className="text-gray-300 text-md leading-8 mt-8 max-w-xl">
           Passionate Full Stack Developer with a strong foundation in web development, dedicated to creating
           responsive and scalable web applications with React, Node,
           MongoDB and modern web technologies.
@@ -146,12 +147,12 @@ export default function Intro() {
 <div className="absolute -top-10 -right-10 w-72 h-72 bg-purple-600 rounded-full blur-[120px] opacity-20"></div>
 
 <div className="absolute bottom-0 -left-10 w-60 h-60 bg-indigo-500 rounded-full blur-[100px] opacity-20"></div>
-          <div className="relative rounded-[35px] border border-indigo-500/30 overflow-hidden hover:cursor-pointer shadow-2xl">
+          <div className="relative rounded-[35px]  overflow-hidden hover:cursor-pointer ">
 
             <img
               src={profilePic}
               alt=""
-              className="w-[420px] h-[550px] object-cover hover:scale-105 transition duration-500"
+              className="w-[500px] h-[500px] object-cover hover:scale-105 transition duration-500"
             />
 
           </div>
