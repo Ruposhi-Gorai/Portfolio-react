@@ -1,39 +1,63 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { CiLocationOn, CiMail, CiLocationArrow1 } from "react-icons/ci";
+import { CiLocationOn, CiMail } from "react-icons/ci";
 import { FaLocationArrow } from "react-icons/fa";
 import { toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  // EmailJS IDs
+  const SERVICE_ID = "service_bnqa2rn";
+  const TEMPLATE_ID = "template_g70xcab";
+  const PUBLIC_KEY = "yI00N7spk2xZuMx0_";
 
-  // const contactData = []
+  const [inputData, setInputData] = useState({
+    name: "",
+    email: "",
+    location: "",
+    message: "",
+  });
 
-  const [inputData, setInputData] = useState('')
-  const formData = JSON.parse(localStorage.getItem('userData')) ?? []
+  const handleChange = (e) => {
+    setInputData({
+      ...inputData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      location: e.target.location.value,
-      message: e.target.message.value,
-    };
 
-    const finalData = [data, ...formData]
+    try {
+      await emailjs.sendForm(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        e.target,
+        PUBLIC_KEY
+      );
 
-    localStorage.setItem('userData', JSON.stringify(finalData))
-    console.log(finalData);
-    e.target.reset();
+      toast.success("Thanks for contacting me!");
 
-    toast.success('thanks for contacting me!')
+      setInputData({
+        name: "",
+        email: "",
+        location: "",
+        message: "",
+      });
 
-
-  }
+      e.target.reset();
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to send message. Please try again.");
+    }
+  };
 
   return (
     <>
-      <div id="contact" className=" w-full md:flex items-center  justify-center gap-10 py-10 my-10 text-gray-100">
+      <div
+        id="contact"
+        className="w-full md:flex items-center justify-center gap-10 py-10 my-10 text-gray-100"
+      >
         <div className="lg:w-[580px] flex flex-wrap w-[30%] flex-col gap-8 text-gray-300 py-10 px-10 mt-1">
           <motion.h1
             initial={{ x: -200, opacity: 0 }}
@@ -54,38 +78,42 @@ export default function Contact() {
           >
             Say hello.
           </motion.p>
+
           <motion.div
             initial={{ x: -200, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
             viewport={{ once: true }}
-            className=" md:text-[18px]  items-center text-gray-400  mt-1 ps-2 bg-[#43485734] rounded-lg shadow-lg p-6 mb-2"
+            className="md:text-[18px] items-center text-gray-400 mt-1 ps-2 bg-[#43485734] rounded-lg shadow-lg p-6 mb-2"
           >
             <div className="flex gap-2 items-center p-3">
-              <CiMail className="text-indigo-400 " />{" "}
-              <span className="text-extralight">ruposhigorai27@gmail.com</span>
+              <CiMail className="text-indigo-400" />
+              <span className="text-extralight">
+                ruposhigorai27@gmail.com
+              </span>
             </div>
+
             <div className="flex gap-2 items-center p-3">
-              <CiLocationOn className="text-indigo-400 " />
-              <span className="text-extralight">Bengaluru, Karnataka, IN</span>{" "}
+              <CiLocationOn className="text-indigo-400" />
+              <span className="text-extralight">
+                Bengaluru, Karnataka, IN
+              </span>
             </div>
           </motion.div>
-
         </div>
 
-        <div className="px-10 md:w-[480px] py-15 ">
-          <h2 className="text-3xl  text-gray-300 font-bold p-5 tracking-[4px] text-center sm:text-4xl">
+        <div className="px-10 md:w-[480px] py-15">
+          <h2 className="text-3xl text-gray-300 font-bold p-5 tracking-[4px] text-center sm:text-4xl">
             Contact Me
           </h2>
 
-          <form onSubmit={handleSubmit}
-            className="mx-auto w-full max-w-[400px] md:max-w-[480px] sm:mt-20 lg:mt-8  ">
+          <form
+            onSubmit={handleSubmit}
+            className="mx-auto w-full max-w-[400px] md:max-w-[480px] sm:mt-20 lg:mt-8"
+          >
             <div className="grid grid-cols-1 gap-x-6 gap-y-1 w-full sm:grid-cols-2">
               <div className="sm:col-span-2">
-                <label
-                  for="location"
-                  className="block text-sm font-semibold leading-6 text-gray-500"
-                >
+                <label className="block text-sm font-semibold leading-6 text-gray-500" >
                   Full Name
                 </label>
                 <div className="mt-2">
@@ -93,17 +121,17 @@ export default function Contact() {
                     type="text"
                     name="name"
                     value={inputData.name}
-                    onChange={(event) => setInputData(event.target.value)}
-                    autocomplete="location"
-                    className="block w-full rounded-md border-0 px-3.5 md:py-2 focus:outline-none focus:ring-0  py-1 shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    onChange={handleChange}
+                    autoComplete="name"
+                    required
+                    placeholder="Enter your name"
+                    className="block w-full rounded-md border-0 px-3.5 md:py-2 focus:outline-none focus:ring-0 py-1 shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
+
               <div className="sm:col-span-2">
-                <label
-                  for="location"
-                  className="block text-sm font-semibold leading-6 text-gray-500"
-                >
+                <label className="block text-sm font-semibold leading-6 text-gray-500">
                   Location
                 </label>
                 <div className="mt-2">
@@ -111,17 +139,17 @@ export default function Contact() {
                     type="text"
                     name="location"
                     value={inputData.location}
-                    onChange={(event) => setInputData(event.target.value)}
-                    autocomplete="location"
+                    onChange={handleChange}
+                    placeholder="Enter your location"
+                    autoComplete="address-level2"
+                    required
                     className="block w-full rounded-md border-0 px-3.5 md:py-2 focus:outline-none focus:ring-0 py-1 shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
+
               <div className="sm:col-span-2">
-                <label
-                  for="email"
-                  className="block text-sm font-semibold leading-6 text-gray-500"
-                >
+                <label className="block text-sm font-semibold leading-6 text-gray-500">
                   Email
                 </label>
                 <div className="mt-2">
@@ -130,34 +158,17 @@ export default function Contact() {
                     name="email"
                     id="email"
                     value={inputData.email}
-                    onChange={(event) => setInputData(event.target.value)}
-                    autocomplete="email"
-                    className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1 focus:outline-none focus:ring-0 shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    onChange={handleChange}
+                    placeholder="Enter your email address"
+                    autoComplete="email"
+                    required
+                    className="block w-full rounded-md border-0 px-3.5 md:py-2 py-1 focus:outline-none focus:ring-0 shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
-              {/* <div className="sm:col-span-2">
-                <label
-                  for="phone-number"
-                  className="block text-sm font-semibold leading-6 text-gray-500"
-                >
-                  Phone number
-                </label>
-                <div className="relative mt-2">
-                  <input
-                    type="tel"
-                    name="phone-number"
-                    id="phone-number"
-                    autocomplete="tel"
-                    className="block w-full rounded-md border-0 px-3.5 md:py-2  py-1 pl-20  shadow-sm ring-1 ring-inset ring-cyan-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div> */}
+
               <div className="sm:col-span-2">
-                <label
-                  for="message"
-                  className="block text-sm font-semibold leading-6 text-gray-500"
-                >
+                <label className="block text-sm font-semibold leading-6 text-gray-500">
                   Message
                 </label>
                 <div className="mt-2">
@@ -166,16 +177,20 @@ export default function Contact() {
                     id="message"
                     rows="4"
                     value={inputData.message}
-                    onChange={(event) => setInputData(event.target.value)}
-                    className="block w-full rounded-md border-0 px-3.5 md:py-2 focus:outline-none focus:ring-0 py-1  shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    placeholder="Enter your message"
+                    onChange={handleChange}
+                    required
+                    className="block w-full rounded-md border-0 px-3.5 md:py-2 focus:outline-none focus:ring-0 py-1 shadow-sm ring-1 ring-inset ring-indigo-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   ></textarea>
                 </div>
               </div>
             </div>
+
             <div className="mt-10">
               <button
                 type="submit"
-                className="flex items-center justify-center group gap-2 w-full rounded-md bg-indigo-700 px-3.5 py-2 cursor-pointer text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"              >
+                className="flex items-center justify-center group gap-2 w-full rounded-md bg-indigo-700 px-3.5 py-2 cursor-pointer text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"
+              >
                 <span>Let's talk</span>
                 <FaLocationArrow className="text-white transition-transform duration-300 group-hover:translate-x-1" />
               </button>
