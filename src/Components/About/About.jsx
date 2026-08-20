@@ -28,15 +28,15 @@ export default function () {
 
   return (
     <>
-      <div id="about" className="my-10 ">
-        <motion.h2
+      <div id="about">
+        {/* <motion.h2
           initial="hidden"
           animate="visible"
           className="text-3xl md:text-5xl  font-sans  text-gray-300 font-bold p-6 tracking-[4px] text-center sm:text-4xl"
         >
           About Me
-        </motion.h2>
-        <div className="flex flex-col  md:flex-row gap-5 pt-5 justify-center  items-center  px-4 md:px-10 w-full ">
+        </motion.h2> */}
+        <div className="flex flex-col  md:flex-row gap-5 justify-center  items-center  px-4 md:px-10 w-full ">
           {/* <div className="w-full md:basis-[40%] px-5 lg:px-10 lg:mx-10 flex items-center justify-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -61,28 +61,55 @@ export default function () {
                 whileInView={{ opacity: 1}}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
-            className="sm:w-[100%] xl:w-[80%] mx-auto md:mt-6 flex justify-center text-gray-400  px-4 md:px-6 text-[16px] xl:text-[18px] lg:shadow-2xl font-light lg:py-10 md:my-10 rounded-full   group transition duration-300 lg:border-b-1  lg:border-indigo-500 ">
-              <p className="lg:w-[900px] text-center px-5">
-               I am a passionate Full Stack Developer driven by the challenge of turning complex ideas into elegant, high-performance web applications. My expertise lies in building dynamic, user-centric interfaces and robust backend systems. I am dedicated to the craft of writing clean, scalable, and efficient code, ensuring that every project is not only functional but also intuitive and accessible. I thrive in collaborative environments, bridging the gap between design and technology to deliver impactful digital experiences that solve real-world problems and exceed user expectations.
-              </p>
-              {/* <div className="py-5">
-                <h2 className="text-xl font-medium py-1 text-cyan-400">
-                  WHO AM I?
-                </h2>
-                <ul className=" custom-dash list-disc ps-6 md:leading-[38px]">
-                  <li> Passionate about technology</li>
-                  <li>Upskilling everyday to become a better developer</li>
-                  <li>
-                    Love to solve problems and build things that make a
-                    difference
-                  </li>
-                  <li>
-                    Love to connect and collaborate with like-minded people
-                  </li>
-                  <li>Love to learn new things and explore new technologies</li>
-                  <li>Quick learner and team player</li>
-                </ul>
-              </div> */}
+            className="sm:w-[100%] xl:w-[80%] mx-auto md:mt-6 flex justify-center text-gray-400  px-4 md:px-6 text-[16px] xl:text-[18px] font-light lg:py-10 md:my-10 rounded-full   group transition duration-300  ">
+             <section className="max-w-4xl mx-auto py-20 px-6">
+  <p className="text-violet-400 uppercase tracking-[0.2em] text-lg mb-3">
+    About Me
+  </p>
+
+  <h2 className="text-4xl md:text-5xl font-bold text-white mb-10">
+    I am a Full-Stack Developer
+   
+  </h2>
+
+  <div className="space-y-5 text-lg">
+    <div className="flex items-center gap-4">
+      <span className="text-2xl">☕</span>
+      <p className="text-gray-300">
+        I love building web experiences that are fast, accessible, and interactive.
+      </p>
+    </div>
+
+    <div className="flex items-center gap-4">
+      <span className="text-2xl">🎨</span>
+      <p className="text-gray-300">
+        Obsessed with clean UI and meaningful interactions.
+      </p>
+    </div>
+
+    <div className="flex items-center gap-4">
+      <span className="text-2xl">⚛️</span>
+      <p className="text-gray-300">
+        Building with React, Tailwind & modern web technologies.
+      </p>
+    </div>
+
+    <div className="flex items-center gap-4">
+      <span className="text-2xl">🚀</span>
+      <p className="text-gray-300">
+        Growing into a better full-stack engineer, day by day.
+      </p>
+    </div>
+
+    <div className="flex items-center gap-4">
+      <span className="text-2xl">✨</span>
+      <p className="text-gray-300">
+        I believe the smallest details create the biggest experiences.
+      </p>
+    </div>
+  </div>
+</section>
+
             </motion.div>
            
           </div>

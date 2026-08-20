@@ -67,9 +67,10 @@ export default function Intro() {
 
   <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
 
-    <div className="grid lg:grid-cols-2 gap-20  items-center">
+    <div className="grid lg:grid-cols-2 md:gap-20  items-center">
 
       {/* LEFT */}
+      <div className="flex flex-col py-10 justify-center">
 
       <motion.div
         initial={{ opacity: 0, x: -70 }}
@@ -77,36 +78,41 @@ export default function Intro() {
         transition={{ duration: .7 }}
       >
 
-        <span className="inline-block my-10 border border-green-500/30 bg-indigo-500/10 px-5 py-2 rounded-full text-green-600">
-           Full Stack Developer
-        </span>
+        <div class="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 mb-4 backdrop-blur-sm">
+  {/* <!-- Animated status dot --> */}
+  <span class="relative flex h-3 w-3">
+    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+    <span class="relative inline-flex h-3 w-3 rounded-full bg-green-400"></span>
+  </span>
 
+  <span class="text-md font-medium text-green-300">
+    Available for Hire
+  </span>
+</div>
         <h1 className="text-6xl lg:text-7xl font-black text-white leading-tight">
           Hi, I'm
           <br />
 
-          <span className="bg-gradient-to-r doto from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r  from-indigo-400 to-purple-500 bg-clip-text text-transparent mb-6  text-5xl font-extrabold leading-[0.9] tracking-tighter md:text-8xl font-display">
             Ruposhi.
           </span>
         </h1>
 
-        <h2 className="text-3xl font-bold text-gray-300 mt-4">
-          I build
-          <span className="text-indigo-400"> things </span>
-          for the web.
+        <h2 className="text-3xl font-bold font-[cursive]  text-gray-300 mt-4">
+          I build fast, accessible & interactive
+          <span className="text-indigo-400"> web </span>
+          experiences.
         </h2>
 
-        <p className="text-gray-300 text-md leading-8 mt-8 max-w-xl">
-          Passionate Full Stack Developer with a strong foundation in web development, dedicated to creating
-          responsive and scalable web applications with React, Node,
-          MongoDB and modern web technologies.
+        <p className="text-gray-300 text-md md:text-xl leading-8 mt-8 max-w-xl">
+          Full Stack Developer crafting performant web experiences with React, Node & <span className="text-emerald-400">MongoDB</span>.
         </p>
 
         <div className="flex gap-5 mt-10 text-white">
 
           <Link
             to="projects"
-            className="bg-indigo-600 hover:bg-indigo-500 hover:cursor-pointer px-8 py-4 rounded-xl font-semibold transition"
+            className="bg-indigo-600 hover:bg-indigo-500 hover:cursor-pointer px-8 py-4 rounded-full font-semibold transition"
           >
             View My Work
           </Link>
@@ -114,18 +120,18 @@ export default function Intro() {
           <a
             href={resumePdf}
             target="_blank"
-            className="border border-gray-700 hover:border-indigo-400 px-8 py-4 rounded-xl transition"
+            className="border border-gray-700 hover:border-indigo-400 px-8 py-4 rounded-full transition"
           >
             Resume
           </a>
 
         </div>
+       
 
-        <div className="mt-12">
-          <Social />
-        </div>
+    
 
       </motion.div>
+       </div>
 
       {/* RIGHT */}
 
@@ -138,7 +144,7 @@ export default function Intro() {
         <div className="relative">
           <div className="absolute -top-40 left-20 w-[500px] h-[500px] rounded-full bg-purple-600/20 blur-[150px] shimmer"></div>
 
-<div className="absolute bottom-0 right-0 w-[450px] h-[450px] rounded-full bg-indigo-500/20 blur-[150px] shimmer"></div>
+<div className="absolute bottom-0 right-0 w-[550px] h-[450px] rounded-full bg-indigo-500/20 blur-[150px] shimmer"></div>
 
 
           {/* Glow */}
@@ -147,12 +153,12 @@ export default function Intro() {
 <div className="absolute -top-10 -right-10 w-72 h-72 bg-purple-600 rounded-full blur-[120px] opacity-20"></div>
 
 <div className="absolute bottom-0 -left-10 w-60 h-60 bg-indigo-500 rounded-full blur-[100px] opacity-20"></div>
-          <div className="relative rounded-[35px]  overflow-hidden hover:cursor-pointer ">
+          <div className="relative md:pt-10 rounded-[35px]  overflow-hidden hover:cursor-pointer ">
 
             <img
               src={profilePic}
               alt=""
-              className="w-[500px] h-[500px] object-cover hover:scale-105 transition duration-500"
+              className="w-[500px] h-[500px] object-contain hover:scale-105 transition duration-500"
             />
 
           </div>
