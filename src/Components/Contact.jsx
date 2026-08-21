@@ -4,6 +4,7 @@ import { CiLocationOn, CiMail } from "react-icons/ci";
 import { FaLocationArrow } from "react-icons/fa";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import Social from "./social/Social";
 
 export default function Contact() {
   // EmailJS IDs
@@ -58,7 +59,7 @@ export default function Contact() {
         id="contact"
         className="w-full md:flex items-center justify-center gap-10 py-10 my-10 text-gray-100"
       >
-        <div className="lg:w-[580px] flex flex-wrap w-[30%] flex-col gap-8 text-gray-300 py-10 px-10 mt-1">
+        <div className="lg:w-[580px] flex flex-wrap w-[30%] flex-col gap-8 text-gray-200 py-10 px-10 mt-1">
           <motion.h1
             initial={{ x: -200, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -84,7 +85,7 @@ export default function Contact() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
             viewport={{ once: true }}
-            className="md:text-[18px] items-center text-gray-400 mt-1 ps-2 bg-[#43485734] rounded-lg shadow-lg p-6 mb-2"
+            className="md:text-[18px] items-center text-gray-600 mt-1 ps-2 bg-[#4348573] rounded-lg border-l border-indigo-500 shadow-sm p-6 mb-2"
           >
             <div className="flex gap-2 items-center p-3">
               <CiMail className="text-indigo-400" />
@@ -98,6 +99,9 @@ export default function Contact() {
               <span className="text-extralight">
                 Bengaluru, Karnataka, IN
               </span>
+            </div>
+            <div className="flex gap-0 items-center">
+              <Social/>
             </div>
           </motion.div>
         </div>

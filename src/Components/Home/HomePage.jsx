@@ -78,14 +78,14 @@ export default function Intro() {
         transition={{ duration: .7 }}
       >
 
-        <div class="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 mb-4 backdrop-blur-sm">
+        <div class="inline-flex my-4 items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 backdrop-blur-sm">
   {/* <!-- Animated status dot --> */}
-  <span class="relative flex h-3 w-3">
-    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-    <span class="relative inline-flex h-3 w-3 rounded-full bg-green-400"></span>
+  <span class="relative flex h-3 w-3 items-center justify-center">
+    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75 duration-2000"></span>
+    <span class="relative inline-flex h-2 w-2  md:h3 md:w3 rounded-full bg-green-400"></span>
   </span>
 
-  <span class="text-md font-medium text-green-300">
+  <span class="text-sm md:text-md font-medium text-green-300">
     Available for Hire
   </span>
 </div>
@@ -93,12 +93,12 @@ export default function Intro() {
           Hi, I'm
           <br />
 
-          <span className="bg-gradient-to-r  from-indigo-400 to-purple-500 bg-clip-text text-transparent mb-6  text-5xl font-extrabold leading-[0.9] tracking-tighter md:text-8xl font-display">
-            Ruposhi.
+          <span className="bg-gradient-to-r  from-indigo-400 to-purple-500 bg-clip-text text-transparent mb-6  text-7xl font-extrabold leading-[0.9] tracking-tighter md:text-8xl font-display">
+            Ruposhi
           </span>
         </h1>
 
-        <h2 className="text-3xl font-bold font-[cursive]  text-gray-300 mt-4">
+        <h2 className="text-2xl md:text-3xl font-bold font-[cursive]  text-gray-300 my-10 md:my-8">
           I build fast, accessible & interactive
           <span className="text-indigo-400"> web </span>
           experiences.
@@ -112,7 +112,7 @@ export default function Intro() {
 
           <Link
             to="projects"
-            className="bg-indigo-600 hover:bg-indigo-500 hover:cursor-pointer px-8 py-4 rounded-full font-semibold transition"
+            className="bg-indigo-600 hover:bg-indigo-500 hover:cursor-pointer px-4 md:px-4 py-2 md:py-2 flex items-center justify-center rounded-full font-medium transition"
           >
             View My Work
           </Link>
@@ -120,7 +120,7 @@ export default function Intro() {
           <a
             href={resumePdf}
             target="_blank"
-            className="border border-gray-700 hover:border-indigo-400 px-8 py-4 rounded-full transition"
+            className="border border-gray-700 hover:border-indigo-400 px-4 md:px-4 py-2 md:py-2 flex items-center justify-center rounded-full transition"
           >
             Resume
           </a>

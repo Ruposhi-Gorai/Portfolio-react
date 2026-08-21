@@ -13,7 +13,7 @@ import Torch from "./Components/Torch";
 
 createRoot(document.getElementById("root")).render(
   <>
-    <Torch />
+    
     <div className="h-screen z-[-2] absolute top-0 w-full flex justify-center bg-gradient-to-b from-gray-800 to-[#0a0a0a]">
     </div>
       <NavSection />
