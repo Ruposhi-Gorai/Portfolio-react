@@ -7,7 +7,7 @@ import { Link } from "react-scroll";
 import Social from "../social/Social";
 import profilePic from "../../assets/images/pic6.png";
 import botPic from "../../assets/images/pic4.png";
-import resumePdf from "../../assets/RuposhiGorai.pdf"; // adjust ../ if needed
+import resumePdf from "../../assets/Ruposhi Gorai.pdf"; // adjust ../ if needed
 
 const isMobile = () => window.innerWidth <= 768;
 
