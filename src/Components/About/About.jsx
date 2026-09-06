@@ -28,7 +28,7 @@ export default function () {
 
   return (
     <>
-      <div id="about">
+      <div id="about" className="relative -mt-px bg-black">
         {/* <motion.h2
           initial="hidden"
           animate="visible"

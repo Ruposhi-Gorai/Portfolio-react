@@ -6,9 +6,9 @@ export const getProjects = (req, res) => {
   const projects = [
     {
       id: 1,
-      title: "Telco Clone",
+      title: "SignalOS",
       category: "Full Stack",
-      description: "A full-stack telecom platform for browsing plans and managing customer services.",
+      description: "Building a full-stack telecom platform featuring authentication, user profiles, plan ordering, account management and order tracking inspired by real-world telecom systems.",
       tech: ["React", "Node.js", "Express", "MongoDB"],
       status: "In progress",
     },
@@ -16,7 +16,7 @@ export const getProjects = (req, res) => {
       id: 2,
       title: "Portfolio Website",
       category: "Full-stack",
-      description: "A responsive developer portfolio showcasing projects, skills, and contact details.",
+      description: "A responsive developer portfolio showcasing projects, skills and contact details.",
       tech: ["React", "Node.js", "Express", "MongoDB"],
       status: "Completed",
       link: "https://www.ruposhigorai.in"
@@ -25,7 +25,7 @@ export const getProjects = (req, res) => {
       id: 3,
       title: "Ecommerce Website",
       category: "Frontend",
-      description: "A modern ecommerce interface with product browsing, state management, and responsive layouts.",
+      description: "A modern ecommerce interface with product browsing, state management and responsive layouts.",
       tech: ["Next.js", "Tailwind CSS", "Redux"],
       status: "Completed",
       link: "https://rb-new-seven.vercel.app/"
