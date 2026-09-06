@@ -7,7 +7,7 @@ import { Link } from "react-scroll";
 import Social from "../social/Social";
 import profilePic from "../../assets/images/pic6.png";
 import botPic from "../../assets/images/pic4.png";
-import resumePdf from "../../assets/Ruposhi Gorai.pdf"; // adjust ../ if needed
+import resumePdf from "../../assets/RuposhiGorai.pdf"; // adjust ../ if needed
 
 const isMobile = () => window.innerWidth <= 768;
 
@@ -65,12 +65,12 @@ export default function Intro() {
 >
   <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0f] to-black"></div>
 
-  <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+  <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6">
 
-    <div className="grid lg:grid-cols-2 md:gap-20  items-center">
+    <div className="grid items-center gap-10 md:gap-20 lg:grid-cols-2">
 
       {/* LEFT */}
-      <div className="flex flex-col py-10 justify-center">
+      <div className="flex flex-col justify-center py-8 sm:py-10">
 
       <motion.div
         initial={{ opacity: 0, x: -70 }}
@@ -78,41 +78,41 @@ export default function Intro() {
         transition={{ duration: .7 }}
       >
 
-        <div class="inline-flex my-4 items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 backdrop-blur-sm">
+        <div class="my-3 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 backdrop-blur-sm sm:my-4 sm:px-4 sm:py-2">
   {/* <!-- Animated status dot --> */}
   <span class="relative flex h-3 w-3 items-center justify-center">
     <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75 duration-2000"></span>
     <span class="relative inline-flex h-2 w-2  md:h3 md:w3 rounded-full bg-green-400"></span>
   </span>
 
-  <span class="text-sm md:text-md font-medium text-green-300">
+  <span class="text-xs font-medium text-green-300 sm:text-sm">
     Available for Hire
   </span>
 </div>
-        <h1 className="text-6xl lg:text-7xl font-black text-white leading-tight">
+        <h1 className="text-4xl font-black leading-tight text-white sm:text-5xl lg:text-7xl">
           Hi, I'm
           <br />
 
-          <span className="bg-gradient-to-r  from-indigo-400 to-purple-500 bg-clip-text text-transparent mb-6  text-7xl font-extrabold leading-[0.9] tracking-tighter md:text-8xl font-display">
+          <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-5xl font-display font-extrabold leading-[0.9] tracking-tighter text-transparent sm:text-6xl md:text-8xl">
             Ruposhi
           </span>
         </h1>
 
-        <h2 className="text-2xl md:text-3xl font-bold font-[cursive]  text-gray-300 my-10 md:my-8">
+        <h2 className="my-6 text-lg font-bold font-[cursive] leading-8 text-gray-300 sm:my-10 sm:text-2xl md:my-8 md:text-3xl">
           I build fast, accessible & interactive
           <span className="text-indigo-400"> web </span>
           experiences.
         </h2>
 
-        <p className="text-gray-300 text-md md:text-xl leading-8 mt-8 max-w-xl">
+        <p className="mt-6 max-w-xl text-sm leading-7 text-gray-300 sm:text-base md:mt-8 md:text-xl md:leading-8">
           Full Stack Developer crafting performant web experiences with React, Node & <span className="text-emerald-400">MongoDB</span>.
         </p>
 
-        <div className="flex gap-5 mt-10 text-white">
+        <div className="mt-8 flex flex-col gap-3 text-white sm:flex-row sm:flex-wrap sm:gap-5 md:mt-10">
 
           <Link
             to="projects"
-            className="bg-indigo-600 hover:bg-indigo-500 hover:cursor-pointer px-4 md:px-4 py-2 md:py-2 flex items-center justify-center rounded-full font-medium transition"
+            className="flex min-h-11 w-full max-w-[220px] items-center justify-center rounded-full bg-indigo-600 px-5 py-2 text-sm font-medium transition hover:cursor-pointer hover:bg-indigo-500 sm:w-auto sm:max-w-none"
           >
             View My Work
           </Link>
@@ -120,7 +120,8 @@ export default function Intro() {
           <a
             href={resumePdf}
             target="_blank"
-            className="border border-gray-700 hover:border-indigo-400 px-4 md:px-4 py-2 md:py-2 flex items-center justify-center rounded-full transition"
+            rel="noopener noreferrer"
+            className="relative z-10 flex min-h-11 w-full max-w-[220px] items-center justify-center rounded-full border border-gray-700 px-5 py-2 text-sm transition hover:border-indigo-400 sm:w-auto sm:max-w-none"
           >
             Resume
           </a>
@@ -142,23 +143,23 @@ export default function Intro() {
         className="flex justify-center"
       >
         <div className="relative">
-          <div className="absolute -top-40 left-20 w-[500px] h-[500px] rounded-full bg-purple-600/20 blur-[150px] shimmer"></div>
+          <div className="absolute -top-20 left-10 hidden h-[300px] w-[300px] rounded-full bg-purple-600/20 blur-[100px] shimmer sm:block md:-top-40 md:left-20 md:h-[500px] md:w-[500px] md:blur-[150px]"></div>
 
-<div className="absolute bottom-0 right-0 w-[550px] h-[450px] rounded-full bg-indigo-500/20 blur-[150px] shimmer"></div>
+<div className="absolute bottom-0 right-0 hidden h-[300px] w-[350px] rounded-full bg-indigo-500/20 blur-[100px] shimmer sm:block md:h-[450px] md:w-[550px] md:blur-[150px]"></div>
 
 
           {/* Glow */}
 
           <div className="absolute inset-0 rounded-[40px] bg-indigo-600 blur-3xl opacity-20"></div>
-<div className="absolute -top-10 -right-10 w-72 h-72 bg-purple-600 rounded-full blur-[120px] opacity-20"></div>
+<div className="absolute -right-5 -top-5 h-48 w-48 bg-purple-600 rounded-full blur-[90px] opacity-20 md:-right-10 md:-top-10 md:h-72 md:w-72 md:blur-[120px]"></div>
 
-<div className="absolute bottom-0 -left-10 w-60 h-60 bg-indigo-500 rounded-full blur-[100px] opacity-20"></div>
-          <div className="relative md:pt-10 rounded-[35px]  overflow-hidden hover:cursor-pointer ">
+<div className="absolute bottom-0 -left-5 h-40 w-40 bg-indigo-500 rounded-full blur-[80px] opacity-20 md:-left-10 md:h-60 md:w-60 md:blur-[100px]"></div>
+          <div className="relative overflow-hidden rounded-[35px] hover:cursor-pointer md:pt-10">
 
             <img
               src={profilePic}
               alt=""
-              className="w-[500px] h-[500px] object-contain hover:scale-105 transition duration-500"
+              className="h-[280px] w-[280px] object-contain transition duration-500 hover:scale-105 sm:h-[360px] sm:w-[360px] md:h-[500px] md:w-[500px]"
             />
 
           </div>

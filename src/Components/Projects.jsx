@@ -12,7 +12,7 @@ export default function Projects() {
 
   useEffect(() => {
     axios
-      .get("https://api.github.com/users/Ruposhi-Gorai/repos", {
+      .get("http://localhost:5000/api/projects", {
         params: {
           per_page: 4, // fetch enough projects
           sort: "updated",
@@ -20,7 +20,10 @@ export default function Projects() {
         },
       })
       .then((result) => {
-        const dataWithHomepage = result.data.filter((v) => v.stargazers_count !== 0);
+        const dataWithHomepage = result.data.map((item) => ({
+          ...item,
+          homepage: item.homepage || item.link, // Use 'link' if 'homepage' is not available
+        }));
         setProject(dataWithHomepage);
       })
       .catch(() => {
