@@ -11,7 +11,7 @@ export default function Intro() {
     <>
 <section
   id="/"
-  className="relative flex min-h-0 items-start overflow-hidden bg-black bg-grid py-3 sm:min-h-screen sm:items-center sm:py-10"
+  className="relative flex min-h-0 items-start overflow-hidden bg-black bg-grid py-3 sm:min-h-screen sm:items-center sm:py-10 z-1"
 >
   <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0f] to-black"></div>
 
@@ -58,7 +58,7 @@ export default function Intro() {
 
           <Link
             to="projects"
-            className="flex min-h-10 w-full max-w-[200px] items-center justify-center rounded-full bg-indigo-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-indigo-600  transition duration-300 hover:-translate-y-0.5 hover:cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300 sm:min-h-11 sm:w-auto sm:max-w-none sm:px-5 sm:py-2"
+            className="flex min-h-10 w-full max-w-[180px] items-center justify-center rounded-full bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white transition duration-300 hover:-translate-y-0.5 hover:cursor-pointer hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300 sm:min-h-11 sm:w-auto sm:max-w-none sm:px-5 sm:py-2"
           >
             View My Work
           </Link>
@@ -67,7 +67,7 @@ export default function Intro() {
             href={resumePdf}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative z-10 flex min-h-10 w-full max-w-[200px] items-center justify-center rounded-full border border-gray-700 px-4 py-1.5 text-sm transition hover:border-indigo-400 sm:min-h-11 sm:w-auto sm:max-w-none sm:px-5 sm:py-2"
+            className="relative z-10 flex min-h-10 w-full max-w-[180px] items-center justify-center rounded-full border border-gray-700 px-3 py-1.5 text-sm transition hover:border-indigo-400 sm:min-h-11 sm:w-auto sm:max-w-none sm:px-5 sm:py-2"
           >
             Resume
           </a>
@@ -100,7 +100,7 @@ export default function Intro() {
             <img
               src={profilePic}
               alt=""
-              className="h-48 w-48 object-contain transition duration-500 hover:scale-105 sm:h-[360px] sm:w-[360px] md:h-[500px] md:w-[500px]"
+              className="h-56 w-56 object-contain transition duration-500 hover:scale-105 sm:h-[360px] sm:w-[360px] md:h-[500px] md:w-[500px]"
             />
 
           </div>
