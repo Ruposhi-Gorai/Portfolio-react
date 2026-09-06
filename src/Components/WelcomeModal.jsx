@@ -139,7 +139,7 @@ export default function WelcomeModal() {
             disabled={isSubmitting}
             className="w-full rounded-lg bg-emerald-500 px-4 py-3 font-semibold text-white transition hover:bg-emerald-400 disabled:cursor-wait disabled:opacity-60"
           >
-            {isSubmitting ? "Saving..." : "Enter website"}
+            {isSubmitting ? "Saving..." : "Submit"}
           </button>
 
           <button
