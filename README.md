@@ -1,5 +1,19 @@
 # React + Vite
 
+## Visitor Welcome Form
+
+The backend visitor endpoint stores welcome-form submissions in MongoDB. Configure
+these environment variables in the backend deployment before using the form:
+
+```text
+MONGODB_URI=your-mongodb-connection-string
+MONGODB_DB=portfolio
+```
+
+The frontend asks a visitor for their name and place after three seconds on their
+first visit. A successful submission is remembered in that browser, so the form is
+skipped on later visits from the same browser.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
