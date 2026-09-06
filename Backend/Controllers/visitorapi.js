@@ -1,17 +1,23 @@
 import { MongoClient } from "mongodb";
 
-const mongoUri = process.env.MONGODB_URI;
 const databaseName = process.env.MONGODB_DB || "portfolio";
 let clientPromise;
 
 const getVisitorsCollection = async () => {
+  const mongoUri = process.env.MONGODB_URI;
+
   if (!mongoUri) {
     throw new Error("MONGODB_URI is not configured");
   }
 
   if (!clientPromise) {
-    const client = new MongoClient(mongoUri);
-    clientPromise = client.connect();
+    const client = new MongoClient(mongoUri, {
+      serverSelectionTimeoutMS: 10000,
+    });
+    clientPromise = client.connect().catch((error) => {
+      clientPromise = undefined;
+      throw error;
+    });
   }
 
   const client = await clientPromise;
@@ -54,7 +60,7 @@ export const saveVisitor = async (req, res) => {
 
     return res.status(201).json({ saved: true });
   } catch (error) {
-    console.error("Unable to save visitor:", error.message);
+    console.error("Unable to save visitor:", error.name, error.message);
     return res.status(503).json({
       message: "Visitor storage is temporarily unavailable.",
     });

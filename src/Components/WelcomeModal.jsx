@@ -82,8 +82,17 @@ export default function WelcomeModal() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="welcome-title"
-        className="w-full max-w-md rounded-2xl border border-white/10 bg-[#11131c] p-6 text-white shadow-2xl sm:p-8"
+        className="relative w-full max-w-md rounded-2xl border border-white/10 bg-[#11131c] p-6 text-white shadow-2xl sm:p-8"
       >
+        <button
+          type="button"
+          onClick={() => setIsOpen(false)}
+          aria-label="Close welcome form"
+          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full text-xl text-gray-400 transition hover:bg-white/10 hover:text-white"
+        >
+          &times;
+        </button>
+
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">
            Welcome to my portfolio!
         </p>
@@ -130,6 +139,14 @@ export default function WelcomeModal() {
             className="w-full rounded-lg bg-emerald-500 px-4 py-3 font-semibold text-white transition hover:bg-emerald-400 disabled:cursor-wait disabled:opacity-60"
           >
             {isSubmitting ? "Saving..." : "Enter website"}
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setIsOpen(false)}
+            className="w-full py-2 text-sm text-gray-400 transition hover:text-white"
+          >
+            Continue without sharing
           </button>
         </form>
       </div>
