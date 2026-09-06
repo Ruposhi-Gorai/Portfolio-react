@@ -4,10 +4,11 @@ const databaseName = process.env.MONGODB_DB || "portfolio";
 let clientPromise;
 
 const getVisitorsCollection = async () => {
-  const mongoUri = process.env.MONGODB_URI;
+  const configuredUri = process.env.MONGODB_URI || process.env.MONGO_URI;
+  const mongoUri = configuredUri?.trim().replace(/^['"]|['"]$/g, "");
 
   if (!mongoUri) {
-    throw new Error("MONGODB_URI is not configured");
+    throw new Error("MONGODB_URI or MONGO_URI is not configured");
   }
 
   if (!clientPromise) {
@@ -21,7 +22,9 @@ const getVisitorsCollection = async () => {
   }
 
   const client = await clientPromise;
-  return client.db(databaseName).collection("visitors");
+  const visitors = client.db(databaseName).collection("visitors");
+  await visitors.createIndex({ visitorId: 1 }, { unique: true });
+  return visitors;
 };
 
 export const saveVisitor = async (req, res) => {

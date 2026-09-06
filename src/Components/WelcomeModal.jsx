@@ -60,13 +60,14 @@ export default function WelcomeModal() {
       });
 
       if (!response.ok) {
-        throw new Error("Unable to save visitor");
+        const result = await response.json().catch(() => null);
+        throw new Error(result?.message || "Unable to save visitor");
       }
 
       window.localStorage.setItem(completedStorageKey, "true");
       setIsOpen(false);
-    } catch {
-      setError("We could not save your details. Please try again.");
+    } catch (error) {
+      setError(error.message || "We could not save your details. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
