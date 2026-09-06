@@ -85,11 +85,11 @@ export default function WelcomeModal() {
         className="w-full max-w-md rounded-2xl border border-white/10 bg-[#11131c] p-6 text-white shadow-2xl sm:p-8"
       >
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">
-          Welcome
+           Welcome to my portfolio!
         </p>
-        <h2 id="welcome-title" className="mt-3 text-2xl font-bold sm:text-3xl">
-          Tell me a little about you
-        </h2>
+            <h2 id="welcome-title" className="mt-3 text-lg font-bold sm:text-lg">
+                Let's get to know each other...☺️
+            </h2>
         <p className="mt-3 text-sm leading-6 text-gray-400">
           Before you explore, share your name and where you are visiting from.
         </p>
