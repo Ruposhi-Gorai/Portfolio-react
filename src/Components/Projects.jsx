@@ -6,19 +6,23 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import { motion } from "framer-motion";
 
-export default function Projects() {
+export default  function Projects() {
   const [project, setProject] = useState([]);
   const [visibleCount, setVisibleCount] = useState(3);
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/projects", {
-        params: {
-          per_page: 4, // fetch enough projects
-          sort: "updated",
-          page: 1,
-        },
-      })
+
+  useEffect(async () => {
+
+    const result = await axios.get(
+          `${import.meta.env.VITE_API_URL}/api/projects`,
+          {
+            params: {
+              per_page: 4,
+              sort: "updated",
+              page: 1,
+            },
+          }
+        )
       .then((result) => {
         const dataWithHomepage = result.data.map((item) => ({
           ...item,
